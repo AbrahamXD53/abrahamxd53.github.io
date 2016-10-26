@@ -14,7 +14,7 @@
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 	</head>
-	<body ng-app="Portfolio" ng-controller="MainController">
+	<body ng-app="Portfolio" >
 
 		<!-- Header -->
 			<header id="header">
@@ -87,34 +87,25 @@
 					</header>
 
 				<!-- Lightbox Gallery  -->
-				<div class="container 75% gallery">
-						<div class="row 0% images" ng-repeat="experiment in Works">
-							<div class="6u 12u(mobile)" ng-repeat="exp in experiment">
-								<a ng-href="{{exp.image}}" ng-class="exp.class">
-									<h3>{{exp.name}}</h3>
-									{{exp.info}}
-									<img ng-src="{{exp.image}}" ng-attr-title="<a href='{{exp.link}}' target='_blank'>{{exp.linkDesc}}</a>" alt="" />
-									<br>
-								</a>
-							</div>
-						</div>
-					</div>
+				<div class="container 75% gallery" ng-controller="work">
+					<gallery-element data="Works"></gallery-element>
+				</div>
 
 
 			</section>
 
 			<section id="exper" class="main style3 primary" >
-				<div class="content container">
+				<div class="content container" >
 					<header>
 						<h2>Experiments</h2>
 						<p>Sometimes I can not finish my ideas, or I just want to learn or make experiments, here you can see a few of them</p>
 					</header>
 
 					<!-- Lightbox Gallery  -->
-					<div class="container 75% gallery">
-						<gallery-element data={{Works}}></gallery-element>
+					<div class="container 75% gallery" ng-controller="experiment">
+						<!--<gallery-element data="Works"></gallery-element>-->
 
-						<div class="row 0% images" ng-repeat="experiment in Experiments">
+						<div class="row 0% images" ng-repeat="experiment in Works">
 							<div class="6u 12u(mobile)" ng-repeat="exp in experiment">
 								<a ng-href="{{exp.image}}" ng-class="exp.class">
 									<h3>{{exp.name}}</h3>

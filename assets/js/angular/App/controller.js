@@ -1,93 +1,12 @@
-app.controller('MainController',['$scope',function($scope)
+app.controller('work',['$scope',function($scope)
 {
-	$scope.Experiments=[
-		[
-			{
-				name:'Fallen Robot++',
-				info:'Upgrades to Fallen Robot',
-				image:'images/upfallen.png',
-				class:'image fit from-left',
-				linkDesc:'Play it now!',
-				link:'https://dl.dropboxusercontent.com/u/113094663/hr/happyrobot.html'
-				//something:"<a href='https://dl.dropboxusercontent.com/u/113094663/webgl/Sprites/index.html>Play it!</a>"
-			},
-			{
-				name:"Construct 2",
-				info:"Testing Construct 2",
-				image:'images/construct.png',
-				class:'image fit from-right',
-				linkDesc:'Play it now!',
-				link:"https://dl.dropboxusercontent.com/u/113094663/demo/index.html"
-
-			}
-		],
-		[
-			{
-				name:'My Minecraft Clone',
-				info:'I wanted to learn how Minecraft was made',
-				image:'images/mine.png',
-				class:'image fit from-left',
-				linkDesc:'Play it now!',
-				link:'https://dl.dropboxusercontent.com/u/113094663/MineDragon/voxel2.html'
-				//something:"<a href='https://dl.dropboxusercontent.com/u/113094663/webgl/Sprites/index.html>Play it!</a>"
-			},
-			{
-				name:"Time Traveling",
-				info:"Testing movement and animations",
-				image:'images/time.png',
-				class:'image fit from-right',
-				linkDesc:'Play it now!',
-				link:"http://gamejolt.com/games/run-em-over/79746"
-
-			}
-		],
-		[
-			{
-				name:'Physics and Gameplay!',
-				info:'A physics based game',
-				image:'images/apg.png',
-				class:'image fit from-left',
-				linkDesc:'Play it now!',
-				link:'https://dl.dropboxusercontent.com/u/113094663/sp/200215%20150/web.html'
-				//something:"<a href='https://dl.dropboxusercontent.com/u/113094663/webgl/Sprites/index.html>Play it!</a>"
-			},
-			{
-				name:"Checking Horror games",
-				info:"A Mine Horror enviroment",
-				image:'images/horror.png',
-				class:'image fit from-right',
-				linkDesc:'Play it now!',
-				link:"https://dl.dropboxusercontent.com/u/113094663/Web/Web.html"
-
-			}
-		],
-		[
-			{
-				name:'Web GL Rendering',
-				info:'Web GL 2D Rendering Engine',
-				image:'images/webgl.png',
-				class:'image fit from-left',
-				linkDesc:'Play it now!',
-				link:'https://dl.dropboxusercontent.com/u/113094663/webgl/Sprites/index.html'
-				//something:"<a href='https://dl.dropboxusercontent.com/u/113094663/webgl/Sprites/index.html>Play it!</a>"
-			},
-			{
-				name:"Gravity Dreams",
-				info:"A space game based on gravity",
-				image:'images/gravitydreams.png',
-				class:'image fit from-right',
-				linkDesc:'Watch on Youtube!',
-				link:"https://www.youtube.com/watch?v=S7ll08iAqjA"
-
-			}
-		],
-	];
+	
 	$scope.data='gfys';
 	$scope.Works=[
 		[
 			{
 				name:'Gamejolt Profile',
-				info:'May Games in Gamejolt',
+				info:'My Games in Gamejolt',
 				image:'images/gamejolt.png',
 				class:'image fit from-left',
 				linkDesc:'Play it',
@@ -186,4 +105,88 @@ app.controller('MainController',['$scope',function($scope)
 		]
 	];
 	
+}]);
+app.controller('experiment',['$scope',function($scope){
+	$scope.Works=[
+		[
+			{
+				name:'Fallen Robot++',
+				info:'Upgrades to Fallen Robot',
+				image:'images/upfallen.png',
+				class:'image fit from-left',
+				linkDesc:'Play it now!',
+				link:'https://dl.dropboxusercontent.com/u/113094663/hr/happyrobot.html'
+				//something:"<a href='https://dl.dropboxusercontent.com/u/113094663/webgl/Sprites/index.html>Play it!</a>"
+			},
+			{
+				name:"Construct 2",
+				info:"Testing Construct 2",
+				image:'images/construct.png',
+				class:'image fit from-right',
+				linkDesc:'Play it now!',
+				link:"https://dl.dropboxusercontent.com/u/113094663/demo/index.html"
+
+			}
+		],
+		[
+			{
+				name:'My Minecraft Clone',
+				info:'I wanted to learn how Minecraft was made',
+				image:'images/mine.png',
+				class:'image fit from-left',
+				linkDesc:'Play it now!',
+				link:'https://dl.dropboxusercontent.com/u/113094663/MineDragon/voxel2.html'
+				//something:"<a href='https://dl.dropboxusercontent.com/u/113094663/webgl/Sprites/index.html>Play it!</a>"
+			},
+			{
+				name:"Time Traveling",
+				info:"Testing movement and animations",
+				image:'images/time.png',
+				class:'image fit from-right',
+				linkDesc:'Play it now!',
+				link:"http://gamejolt.com/games/run-em-over/79746"
+
+			}
+		],
+		[
+			{
+				name:'Physics and Gameplay!',
+				info:'A physics based game',
+				image:'images/apg.png',
+				class:'image fit from-left',
+				linkDesc:'Play it now!',
+				link:'https://dl.dropboxusercontent.com/u/113094663/sp/200215%20150/web.html'
+				//something:"<a href='https://dl.dropboxusercontent.com/u/113094663/webgl/Sprites/index.html>Play it!</a>"
+			},
+			{
+				name:"Checking Horror games",
+				info:"A Mine Horror enviroment",
+				image:'images/horror.png',
+				class:'image fit from-right',
+				linkDesc:'Play it now!',
+				link:"https://dl.dropboxusercontent.com/u/113094663/Web/Web.html"
+
+			}
+		],
+		[
+			{
+				name:'Web GL Rendering',
+				info:'Web GL 2D Rendering Engine',
+				image:'images/webgl.png',
+				class:'image fit from-left',
+				linkDesc:'Play it now!',
+				link:'https://dl.dropboxusercontent.com/u/113094663/webgl/Sprites/index.html'
+				//something:"<a href='https://dl.dropboxusercontent.com/u/113094663/webgl/Sprites/index.html>Play it!</a>"
+			},
+			{
+				name:"Gravity Dreams",
+				info:"A space game based on gravity",
+				image:'images/gravitydreams.png',
+				class:'image fit from-right',
+				linkDesc:'Watch on Youtube!',
+				link:"https://www.youtube.com/watch?v=S7ll08iAqjA"
+
+			}
+		],
+	];
 }]);

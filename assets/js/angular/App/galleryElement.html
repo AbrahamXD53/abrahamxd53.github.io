@@ -1,10 +1,10 @@
-{{data}}
-<div class="row 0% images" ng-repeat="work in data">
-	<div class="6u 12u(mobile)" ng-repeat="exp in work">
-		<a ng-href="{{exp.image}}" ng-class="exp.class">
-			<h2>{{exp.name}}</h2>
-			<img ng-src="{{exp.image}}" ng-attr-title="<a href='{{exp.link}}' target='_blank'>{{exp.linkDesc}}</a>" alt="" />
-			{{exp.info}}
-		</a>
-	</div>
-</div>
+<div class="row 0% images" ng-repeat="experiment in data">
+							<div class="6u 12u(mobile)" ng-repeat="exp in experiment">
+								<a ng-href="{{exp.image}}" ng-class="exp.class">
+									<h3>{{exp.name}}</h3>
+									{{exp.info}}
+									<img ng-src="{{exp.image}}" ng-attr-title="<a href='{{exp.link}}' target='_blank'>{{exp.linkDesc}}</a>" alt="" />
+									<br>
+								</a>
+							</div>
+						</div>
