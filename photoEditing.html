@@ -4,6 +4,30 @@
 	<title></title>
 </head>
 <body>
-	<iframe src="https://www.picozu.com/editor/?i=https://www.picozu.com/u/generic.jpg&workspace=0&theme=galaxy&key=6kKp3qOzFDZOpwJX" width="1172" height="800"></iframe>
+    <script type="text/javascript" src="https://cdn-creativesdk.adobe.io/v1/csdk.js"></script>
+    <script type="text/javascript">
+    	AdobeCreativeSDK.init({
+    	clientID: '83a16eedeeaf44d1be7b2b2daa4e828e',
+    	onError: function(error) {
+        /* 3) Handle any global or config errors */
+        if (error.type === AdobeCreativeSDK.ErrorTypes.AUTHENTICATION) { 
+            /* 
+                Note: this error will occur when you try 
+                to launch a component without checking if 
+                the user has authorized your app. 
+                
+                From here, you can trigger 
+                AdobeCreativeSDK.loginWithRedirect().
+            */
+            console.log('You must be logged in to use the Creative SDK');
+        } else if (error.type === AdobeCreativeSDK.ErrorTypes.GLOBAL_CONFIGURATION) { 
+            console.log('Please check your configuration');
+        } else if (error.type === AdobeCreativeSDK.ErrorTypes.SERVER_ERROR) { 
+            console.log('Oops, something went wrong');
+        }
+    	}
+	});
+    </script>
+</body>
 </body>
 </html>
