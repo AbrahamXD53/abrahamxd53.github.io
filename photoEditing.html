@@ -4,13 +4,13 @@
 	<title></title>
 </head>
 <body>
-	<script type="text/javascript" src="http://feather.aviary.com/imaging/v3/editor.js"></script>
+	<script type="text/javascript" src="https://feather.aviary.com/imaging/v3/editor.js"></script>
 
 <!-- Instantiate the widget -->
 <script type="text/javascript">
 
 	var featherEditor = new Aviary.Feather({
-			apiKey: '1234567',
+			apiKey: '83a16eedeeaf44d1be7b2b2daa4e828e',
 			onSave: function(imageID, newURL) {
 					var img = document.getElementById(imageID);
 					img.src = newURL;
@@ -30,10 +30,10 @@
 <!-- Add an edit button, passing the HTML id of the image
 	and the public URL to the image -->
 <a href="#" onclick="return launchEditor('editableimage1',
-	'http://example.com/public/images/goat.jpg');">Edit!</a>
+	'https://abrahamxd53.github.io/images/fallen.png');">Edit!</a>
 
 <!-- original line of HTML here: -->
-<img id="editableimage1" src="http://example.com/public/images/goat.jpg"/>
+<img id="editableimage1" src="https://abrahamxd53.github.io/images/fallen.png"/>
     </script>
 </body>
 </html>
