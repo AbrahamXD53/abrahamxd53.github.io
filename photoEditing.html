@@ -7,22 +7,21 @@
     <script type="text/javascript" src="https://cdn-creativesdk.adobe.io/v1/csdk.js"></script>
     <script type="text/javascript">
     	AdobeCreativeSDK.init({
-    	clientID: '83a16eedeeaf44d1be7b2b2daa4e828e',
+    	clientID: '<83a16eedeeaf44d1be7b2b2daa4e828e>',
     	onError: function(error) {
         /* 3) Handle any global or config errors */
-        if (error.type === AdobeCreativeSDK.ErrorTypes.AUTHENTICATION) { 
-            /* 
-                Note: this error will occur when you try 
-                to launch a component without checking if 
-                the user has authorized your app. 
-                
-                From here, you can trigger 
-                AdobeCreativeSDK.loginWithRedirect().
-            */
+        if (error.type === AdobeCreativeSDK.ErrorTypes.AUTHENTICATION) {
+            /*
+                Note: this error will occur when you try
+                to launch a component without checking if
+                the user has authorized your app.
+
+                From here, you can trigger */
+                AdobeCreativeSDK.loginWithRedirect();
             console.log('You must be logged in to use the Creative SDK');
-        } else if (error.type === AdobeCreativeSDK.ErrorTypes.GLOBAL_CONFIGURATION) { 
+        } else if (error.type === AdobeCreativeSDK.ErrorTypes.GLOBAL_CONFIGURATION) {
             console.log('Please check your configuration');
-        } else if (error.type === AdobeCreativeSDK.ErrorTypes.SERVER_ERROR) { 
+        } else if (error.type === AdobeCreativeSDK.ErrorTypes.SERVER_ERROR) {
             console.log('Oops, something went wrong');
         }
     	}
