@@ -4,29 +4,36 @@
 	<title></title>
 </head>
 <body>
-    <script type="text/javascript" src="https://cdn-creativesdk.adobe.io/v1/csdk.js"></script>
-    <script type="text/javascript">
-    	AdobeCreativeSDK.init({
-    	clientID: '83a16eedeeaf44d1be7b2b2daa4e828e',
-    	onError: function(error) {
-        /* 3) Handle any global or config errors */
-        if (error.type === AdobeCreativeSDK.ErrorTypes.AUTHENTICATION) {
-            /*
-                Note: this error will occur when you try
-                to launch a component without checking if
-                the user has authorized your app.
+	<script type="text/javascript" src="http://feather.aviary.com/imaging/v3/editor.js"></script>
 
-                From here, you can trigger */
-                AdobeCreativeSDK.loginWithRedirect();
-            console.log('You must be logged in to use the Creative SDK');
-        } else if (error.type === AdobeCreativeSDK.ErrorTypes.GLOBAL_CONFIGURATION) {
-            console.log('Please check your configuration');
-        } else if (error.type === AdobeCreativeSDK.ErrorTypes.SERVER_ERROR) {
-            console.log('Oops, something went wrong');
-        }
-    	}
+<!-- Instantiate the widget -->
+<script type="text/javascript">
+
+	var featherEditor = new Aviary.Feather({
+			apiKey: '1234567',
+			onSave: function(imageID, newURL) {
+					var img = document.getElementById(imageID);
+					img.src = newURL;
+			}
 	});
+
+	function launchEditor(id, src) {
+			featherEditor.launch({
+					image: id,
+					url: src
+			});
+			return false;
+	}
+
+</script>
+
+<!-- Add an edit button, passing the HTML id of the image
+	and the public URL to the image -->
+<a href="#" onclick="return launchEditor('editableimage1',
+	'http://example.com/public/images/goat.jpg');">Edit!</a>
+
+<!-- original line of HTML here: -->
+<img id="editableimage1" src="http://example.com/public/images/goat.jpg"/>
     </script>
-</body>
 </body>
 </html>
