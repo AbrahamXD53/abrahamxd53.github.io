@@ -1860,7 +1860,13 @@
 		-webkit-transition: all 0.2s ease-in-out, color 0.2s ease-in-out;
 		-ms-transition: all 0.2s ease-in-out, color 0.2s ease-in-out;
 		transition: all 0.2s ease-in-out, color 0.2s ease-in-out;
-		color: #98c593;
+		color: #111;
+	}
+
+	.esp
+	{
+		font-size: 1.5em;
+		color: #0000dd;
 	}
 
 	sub {
@@ -2875,7 +2881,7 @@
 	#intro {
 		/*background: url("images/overlay.png"), url("../../images/intro.jpg");*/
 		background: url("images/overlay.png"), url("images/bg_space.jpg");
-		
+
 		background-size: 256px 256px, cover;
 		background-attachment: fixed, fixed;
 		background-position: top left, bottom center;

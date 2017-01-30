@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body onload="MyGame('WebCanvas')">
+        <canvas id="WebCanvas" height="320" width="480">
+            
+        </canvas>
+        <script type="x-shader/x-vertex" id="VertexShader">
+            attribute vec3 aSquareVertexPosition;
+            void main(void)
+            {
+                gl_Position=vec4(aSquareVertexPosition,1.0);
+            }
+        </script>
+        <script type="x-shader/x-vertex" id="FragmentShader">
+            void main(void)
+            {
+                gl_FragColor=vec4(1.0,1.0,1.0,1.0);
+            }
+        </script>
+        <script src="src/engine/Engine_Core.js" type="text/javascript"></script>
+        <script src="src/engine/VertexBuffer.js" type="text/javascript"></script>
+        <script src="src/engine/SimpleShader.js" type="text/javascript"></script>        
+        <script src="src/game/MyGame.js" type="text/javascript"></script>
+    </body>
+</html>

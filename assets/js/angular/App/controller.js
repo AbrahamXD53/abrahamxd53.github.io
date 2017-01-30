@@ -1,6 +1,6 @@
 app.controller('work',['$scope',function($scope)
 {
-	
+
 	$scope.data='gfys';
 	$scope.Works=[
 		[
@@ -102,9 +102,29 @@ app.controller('work',['$scope',function($scope)
 				link:"https://www.youtube.com/watch?v=fbzZosSbNkA"
 
 			}
+		],
+		[
+			{
+				name:'Better Than Nothing',
+				info:'Made in GGJ 2017 Up to 4 players',
+				image:'images/btn.png',
+				class:'image fit from-left',
+				linkDesc:'Download it now!',
+				link:'http://globalgamejam.org/2017/games/better-nothing'
+				//something:"<a href='https://dl.dropboxusercontent.com/u/113094663/webgl/Sprites/index.html>Play it!</a>"
+			},
+			{
+				name:"VR App (Unity3D)",
+				info:"VR Picture Gallery",
+				image:'images/vrgallery.png',
+				class:'image fit from-right',
+				linkDesc:'Available soon...',
+				link:""
+
+			}
 		]
 	];
-	
+
 }]);
 app.controller('experiment',['$scope',function($scope){
 	$scope.Works=[

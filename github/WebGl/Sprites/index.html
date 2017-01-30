@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>WebGL</title>
+        <style type="text/css">
+            *{
+                padding: 0;
+                margin: 0;
+            }
+        </style>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    </head>
+    <body onload="
+            var game = new MyGame();
+            gEngine.Core.initializeEngineCore('WebCanvas', game);
+          ">
+        <canvas id="WebCanvas" height="480" width="640">
+
+        </canvas>
+        <script type="x-shader/x-vertex" id="VertexShader">
+            attribute vec3 aSquareVertexPosition;
+            void main(void)
+            {
+            gl_Position=vec4(aSquareVertexPosition,1.0);
+            }
+        </script>
+        <script type="x-shader/x-vertex" id="FragmentShader">
+            void main(void)
+            {
+            gl_FragColor=vec4(1.0,1.0,1.0,1.0);
+            }
+        </script>
+        <script type="text/javascript" src="src/lib/gl-matrix-min.js"></script>
+
+        <script type="text/javascript" src="src/engine/Core/Engine_Core.js"></script>
+        <script type="text/javascript" src="src/engine/Core/Engine_VertexBuffer.js"></script>
+        <script type="text/javascript" src="src/engine/Core/Engine_GameLoop.js"></script>
+        <script type="text/javascript" src="src/engine/Core/Engine_Input.js"></script>
+        <!-- Resource support -->
+        <script type="text/javascript" src="src/engine/Core/Resources/Engine_ResourceMap.js"></script>
+        <script type="text/javascript" src="src/engine/Core/Resources/Engine_TextFileLoader.js"></script>
+        <script type="text/javascript" src="src/engine/Core/Resources/Engine_DefaultResources.js"></script>
+        <script type="text/javascript" src="src/engine/Core/Resources/Engine_AudioClips.js"></script>
+        <script type="text/javascript" src="src/engine/Core/Resources/Engine_Textures.js"></script>
+        <script type="text/javascript" src="src/engine/Transform.js"></script>
+        <script type="text/javascript" src="src/engine/Camera.js"></script>
+        <script type="text/javascript" src="src/engine/Scene.js"></script>
+        <!-- Renderables -->
+        <script type="text/javascript" src="src/engine/Renderables/Renderable.js"></script>
+        <script type="text/javascript" src="src/engine/Renderables/TextureRenderable.js"></script>
+        <!-- Shaders -->
+        <script type="text/javascript" src="src/engine/Shaders/SimpleShader.js"></script>
+        <script type="text/javascript" src="src/engine/Shaders/TextureShader.js"></script>
+
+
+        <!-- Client game code -->
+
+        <script type="text/javascript" src="src/game/MyGame.js"></script>
+        <script type="text/javascript" src="src/game/BlueLevel.js"></script>
+
+        <!-- Util -->
+        <script type="text/javascript" src="src/game/Util/SceneFileParser.js"></script>
+    </body>
+</html>

@@ -1,0 +1,6 @@
+<MyGameLevel>    
+    <Camera CenterX="0" CenterY="0" Width="640" Viewport="0, 0, 640, 480" BgColor="0.8,0.8,0.8,1.0"    />    
+    <!-- Squares Rotation is in degree -->    
+    <Square PosX="20" PosY="60" Width="5" Height="5" Rotation="0" Color="1,1,1,1" />    
+    <Square PosX="20" PosY="40" Width="2" Height="2" Rotation="0"  Color="1,0,0,1" /> 
+</MyGameLevel>
