@@ -1,0 +1,16 @@
+section.pattern {
+    background-size: contain !important;
+    background-repeat: repeat !important;
+    background-position: center !important;
+}
+.cid-qs2NyIVLoM .mbr-section-subtitle{
+    color:#f9f295;
+}
+input,textarea{
+    background-color: rgba(127, 127, 127, .5) !important;
+    color: white !important;
+}
+.timeline-text-content,.card-box
+{
+    background-color: rgba(204,204,204,.3) !important;
+}
