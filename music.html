@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hello</title>
+    <link rel="stylesheet" href="assets/css/music.css">    
+    <style>
+        h2 {
+            display: inline-block;
+            margin: 5px;
+            color: teal;
+        }
+
+        .controls {
+            margin-top: 10px;
+            padding: 10px;
+        }
+
+        .Scale-2 {
+            display: none !important;
+        }
+
+        #p-wrapper {
+            width: 760px !important;
+        }
+
+        @media only screen and (min-width: 768px) {
+            .Scale-2 {
+                display: block !important;
+            }
+            #p-wrapper {
+                width: 1300px !important;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="controls">
+        <select name="note" id="note">
+        <option value="0">Do</option>
+        <option value="2">Re</option>
+        <option value="4">Mi</option>
+        <option value="5">Fa</option>
+        <option value="7">Sol</option>
+        <option value="9">La</option>
+        <option value="11">Si</option>
+        <option value="1">Do#/Reb</option>
+        <option value="3">Re#/Mib</option>
+        <option value="6">Fa#/Solb</option>
+        <option value="8">Sol#/Lab</option>
+        <option value="10">La#/Sib</option>
+    </select>
+        <!-- <select name="scale" id="scale">
+        <option value="0">Major</option>
+        <option value="1">Minor</option>
+        <option value="2">Minor Harmonic</option>
+        <option value="3">Minor Melodic</option>
+        <option value="4">Pentatonic Major</option>
+        <option value="5">Pentatonic Minor</option>
+        <option value="6">Blues</option>
+    </select> -->
+        <select name="scale" id="scale">
+            <option value="0">Mayor</option>
+            <option value="1">Menor</option>
+            <option value="2">Menor Armonica</option>
+            <option value="3">Menor Melodica</option>
+            <option value="4">Pentatonica Mayor</option>
+            <option value="5">Pentatonica Menor</option>
+            <option value="6">Blues</option>
+        </select>
+        <button onclick="calc();">Calc</button>
+    </div>
+
+    <div>
+        <div class="scaleName" id="scaleName"></div>
+        <div class="noteContainer"></div>
+        <div class="credit" id="noteContainer">
+
+        </div>
+    </div>
+    <div id="p-wrapper">
+        <ul id="piano">
+            <li>
+                <div class="anchor B Note Scale-1"></div><span class="ASharp Note Scale-1"></span></li>
+            <li>
+                <div class="anchor C Note Scale-1"></div>
+            </li>
+            <li>
+                <div class="anchor D Note Scale-1"></div><span class="CSharp Note Scale-1"></span></li>
+            <li>
+                <div class="anchor E Note Scale-1"></div><span class="DSharp Note Scale-1"></span ></li>
+                <li><div class="anchor F Note Scale-1"></div></li>
+                <li><div class="anchor G Note Scale-1"></div><span class="FSharp Note Scale-1"></span></li>
+            <li>
+                <div class="anchor A Note Scale-1"></div><span class="GSharp Note Scale-1"></span></li>
+            <li>
+                <div class="anchor B Note Scale-1"></div><span class="ASharp Note Scale-1"></span></li>
+            <li>
+                <div class="anchor C Note Scale-1"></div>
+            </li>
+            <li>
+                <div class="anchor D Note Scale-1"></div><span class="CSharp Note Scale-1"></span></li>
+            <li>
+                <div class="anchor E Note Scale-1"></div><span class="DSharp Note Scale-1"></span ></li>
+                <li><div class="anchor F Note Scale-1"></div></li>
+                <li><div class="anchor G Note Scale-1"></div><span class="FSharp Note Scale-1"></span></li>
+            <li>
+                <div class="anchor A Note Scale-1"></div><span class="GSharp Note Scale-1"></span></li>
+            <li>
+                <div class="anchor B Note Scale-1"></div><span class="ASharp Note Scale-1"></span></li>
+            <li>
+                <div class="anchor C Note Scale-1"></div>
+            </li>
+            <li>
+                <div class="anchor D Note Scale-1"></div><span class="CSharp Note Scale-1"></span></li>
+            <li>
+                <div class="anchor E Note Scale-1"></div><span class="DSharp Note Scale-1"></span ></li>
+                <li><div class="anchor F Note Scale-1"></div></li>
+                <li><div class="anchor G Note Scale-2"></div><span class="FSharp Note Scale-2"></span></li>
+            <li>
+                <div class="anchor A Note Scale-2"></div><span class="GSharp Note Scale-2"></span></li>
+            <li>
+                <div class="anchor B Note Scale-2"></div><span class="ASharp Note Scale-2"></span></li>
+            <li>
+                <div class="anchor C Note Scale-2"></div>
+            </li>
+            <li>
+                <div class="anchor D Note Scale-2"></div><span class="CSharp Note Scale-2"></span></li>
+            <li>
+                <div class="anchor E Note Scale-2"></div><span class="DSharp Note Scale-2"></span ></li>
+                <li><div class="anchor F Note Scale-2"></div></li>
+                <li><div class="anchor G Note Scale-2"></div><span class="FSharp Note Scale-2"></span></li>
+            <li>
+                <div class="anchor A Note Scale-2"></div><span class="GSharp Note Scale-2"></span></li>
+            <li>
+                <div class="anchor B Note Scale-2"></div><span class="ASharp Note Scale-2"></span></li>
+            <li>
+                <div class="anchor C Note Scale-2"></div>
+            </li>
+            <li>
+                <div class="anchor D Note Scale-2"></div><span class="CSharp Note Scale-2"></span></li>
+            <li>
+                <div class="anchor E Note Scale-2"></div><span class="DSharp Note Scale-2"></span ></li>
+            </ul>
+        </div>
+        
+    <script>
+        /*C C# D D# E F F# G G# A A# B*/
+        var noteValues = ["Do", "Do#", "Re", "Re#", "Mi", "Fa", "Fa#", "Sol", "Sol#", "La", "La#", "Si"];
+        var classNames = ["C", "CSharp", "D", "DSharp", "E", "F", "FSharp", "G", "GSharp", "A", "ASharp", "B"];
+        var scaleInterval = [
+            [2, 2, 1, 2, 2, 2, 1],    //Major
+            [2, 1, 2, 2, 1, 2, 2],    //Minor
+            [2, 1, 2, 2, 1, 3, 1],    //Minor Harmonic
+            [2, 1, 2, 2, 2, 2, 1],    //Minor Melodic
+            [2, 2, 3, 2, 3],    //Pentatonic Major
+            [3, 2, 2, 3, 2],    //Pentatonica Minor
+            [3, 2, 1, 1, 3, 2],    //Blues
+        ];
+        var noteContainer = document.getElementById("noteContainer");
+        var scaleName = document.getElementById("scaleName");
+        function calc() {
+            clearKeyBoard();
+            var note = parseInt(document.getElementById("note").options[document.getElementById("note").selectedIndex].value);
+            var scale = document.getElementById("scale").selectedIndex;
+            document.title = noteValues[note % 12] + " " + document.getElementById("scale").options[document.getElementById("scale").selectedIndex].innerText;
+            scaleName.innerHTML = "<h1>" + noteValues[note % 12] + " " + document.getElementById("scale").options[document.getElementById("scale").selectedIndex].innerText + "</h1>";
+            noteContainer.innerHTML = "<h2>" + noteValues[note % 12] + "</h2>";
+            for (var i = 0; i < scaleInterval[scale].length; i++) {
+                var element = parseInt(scaleInterval[scale][i]);
+                note += element;
+                noteContainer.innerHTML += "<h2>" + noteValues[note % 12] + "</h2>";
+                paintKeyBoard(note % 12);
+            }
+        }
+        function clearKeyBoard() {
+            var keyboard = document.getElementsByClassName("Note");
+            for (var index = 0; index < keyboard.length; index++) {
+                keyboard[index].classList.remove("inScale");
+
+            }
+        }
+        function paintKeyBoard(keyNote) {
+
+            var keys = document.getElementsByClassName(classNames[keyNote]);
+            for (var index = 0; index < keys.length; index++) {
+                keys[index].classList.add("inScale");
+
+            }
+        }
+
+    </script>
+</body>
+<!-- Pure CSS3 Piano by Taufik Nurrohman-->
+</html>
