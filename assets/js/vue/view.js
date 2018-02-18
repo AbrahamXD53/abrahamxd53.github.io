@@ -4,7 +4,7 @@ const mixin = {
         language: "en",
         langData: {
             en: {
-                cool: "Cool message",
+                cool: "Abraham Ahumada",
                 language: "Language",
                 languagees: "Spanish",
                 languageen: "English",
@@ -43,11 +43,11 @@ const mixin = {
                 followme:"Follow me!",
                 sayname:"Hello! What's your name?",
                 saymail:"What's your email?",
-                saywhatagain:"Tell me about your proyect, How can I help you?"
+                saywhatagain:"Tell me about your project, How can I help you?"
 
             },
             es: {
-                cool: "Cool chido",
+                cool: "Abraham Ahumada",
                 language: "Idioma",
                 languagees: "Español",
                 languageen: "Inglés",
