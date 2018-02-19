@@ -99,7 +99,7 @@ const mixin = {
             this.language = localStorage.getItem("language");
         }
     },
-    beforeMount: function () {
+    mounted: function () {
         if (localStorage.getItem("language")!==undefined) {
             this.language = localStorage.getItem("language");
         } else {
