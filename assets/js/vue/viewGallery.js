@@ -91,18 +91,18 @@ const mixin = {
             },
         }
     },
-    beforeCreate: function () {
-        if (localStorage.language) {
-            this.language = localStorage.language;
+    beforeMount: function () {
+        if (localStorage.getItem("language")!==undefined) {
+            this.language = localStorage.getItem("language");
         } else {
-            localStorage.language = "en";
-            this.language = localStorage.language;
+            localStorage.setItem("language","en");
+            this.language = localStorage.getItem("language");
         }
     },
     methods: {
         changeLang: function (lang) {
             this.language = lang;
-            localStorage.language = this.language;
+            localStorage.setItem("language",this.language);
             return false;
         }
     }
