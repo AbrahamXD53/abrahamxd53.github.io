@@ -99,6 +99,14 @@ const mixin = {
             this.language = localStorage.getItem("language");
         }
     },
+    beforeMount: function () {
+        if (localStorage.getItem("language")!==undefined) {
+            this.language = localStorage.getItem("language");
+        } else {
+            localStorage.setItem("language","en");
+            this.language = localStorage.getItem("language");
+        }
+    },
     methods: {
         changeLang: function (lang) {
             this.language = lang;
