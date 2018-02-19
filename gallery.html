@@ -28,59 +28,40 @@
 </head>
 
 <body>
-    <section class="menu cid-qs2ItuaHrx" once="menu" id="menu1-13" data-rv-view="1651">
+    <section class="menu cid-qs2ItuaHrx" once="menu" id="menu1-g" data-rv-view="1615">
 
 
 
         <nav class="navbar navbar-dropdown align-items-center navbar-toggleable-sm bg-color transparent">
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <div class="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </button>
-            <div class="menu-logo">
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </button>
+            <div class="menu-logo" id="app">
                 <div class="navbar-brand">
 
-                    <span class="navbar-caption-wrap">
-                        <a class="navbar-caption text-white display-5" href="index.html">
-                            Abraham Ahumada</a>
-                    </span>
+                    <span class="navbar-caption-wrap"><a @click="changeLang" class="navbar-caption text-white display-5" href="#">
+                        {{langData[language].cool}}</a></span>
                 </div>
             </div>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav nav-dropdown nav-right" data-app-modern-menu="true">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent" >
+                <ul class="navbar-nav nav-dropdown nav-right" data-app-modern-menu="true" id="app-menu">
                     <li class="nav-item dropdown open">
-                        <a class="nav-link link text-white dropdown-toggle display-4" href="" data-toggle="dropdown-submenu" aria-expanded="true">
-                            <span class="mbri-globe mbr-iconfont mbr-iconfont-btn" style="color: rgb(57, 190, 106);"></span>Languaje</a>
-                        <div class="dropdown-menu">
-                            <a class="text-white dropdown-item display-4" href="index.html">Español
-                                <br>
-                            </a>
-                            <a class="text-white dropdown-item display-4" href="index.html">English
-                                <br>
-                            </a>
-                        </div>
+                        <a class="nav-link link text-white dropdown-toggle display-4" href="https://mobirise.com" data-toggle="dropdown-submenu"
+                            aria-expanded="true"><span class="mbri-globe mbr-iconfont mbr-iconfont-btn" style="color: rgb(57, 190, 106);"></span>{{langData[language].language}}</a>
+                        <div class="dropdown-menu"><a class="text-white dropdown-item display-4" href="#" @click="changeLang('es')">{{langData[language].languagees}}<br></a><a class="text-white dropdown-item display-4" @click="changeLang('en')"
+                                href="#">{{langData[language].languageen}}<br></a></div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link link text-white display-4" href="index.html#progress-bars2-i">
-                            <span class="mbri-user mbr-iconfont mbr-iconfont-btn" style="color: rgb(20, 157, 204);"></span>About Me
-                            <br>
-                        </a>
+                        <a class="nav-link link text-white display-4" href="index.html#progress-bars2-i"><span class="mbri-user mbr-iconfont mbr-iconfont-btn" style="color: rgb(20, 157, 204);"></span>{{langData[language].aboutme}}<br></a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link link text-white display-4" href="gallery.html">
-                            <span class="mbri-website-theme mbr-iconfont mbr-iconfont-btn" style="color: rgb(247, 237, 74);"></span>Gallery
-                            <br>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link link text-white display-4" href="index.html#form1-s">
-                            <span class="mbri-edit mbr-iconfont mbr-iconfont-btn" style="color: rgb(255, 51, 102);"></span>Beep</a>
-                    </li>
+                    <li class="nav-item"><a class="nav-link link text-white display-4" href="gallery.html"><span class="mbri-website-theme mbr-iconfont mbr-iconfont-btn" style="color: rgb(247, 237, 74);"></span>{{langData[language].gallery}}<br></a></li>
+                    <li class="nav-item"><a class="nav-link link text-white display-4" href="index.html#form1-s"><span class="mbri-edit mbr-iconfont mbr-iconfont-btn" style="color: rgb(255, 51, 102);"></span>{{langData[language].beep}}</a></li>
                 </ul>
 
             </div>
@@ -95,12 +76,11 @@
         <div class="mbr-overlay" style="opacity: 0.8; background-color: rgb(35, 35, 35);">
         </div>
 
-        <div class="container">
-            <div class="media-container-row">
+        <div class="container" >
+            <div class="media-container-row" id="app-intro">
                 <div class="title col-12 col-md-8">
-                    <h2 class="align-center mbr-bold mbr-white pb-3 mbr-fonts-style display-1">My Work</h2>
-                    <h3 class="mbr-section-subtitle align-center mbr-light mbr-white pb-3 mbr-fonts-style display-5">Through years I have developed ideas, concepts and projects, I have worked with people how does not speak
-                        my native languaje (IVG Jam), and I have worked in large teams, here are a few examples.</h3>
+                    <h2 class="align-center mbr-bold mbr-white pb-3 mbr-fonts-style display-1">{{langData[language].myworktitle}}</h2>
+                    <h3 class="mbr-section-subtitle align-center mbr-light mbr-white pb-3 mbr-fonts-style display-5">{{langData[language].mywork}}</h3>
                 </div>
             </div>
         </div>
@@ -146,6 +126,34 @@
                                         <span class="mbr-gallery-title mbr-fonts-style display-7">GGJ 2017 Better Than Nothing! (Unity3D)</span>
                                     </div>
                                 </div>
+                                <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false" data-tags="Awesome">
+                                    <div href="#lb-gallery3-1d" data-slide-to="4" data-toggle="modal">
+                                        <img src="assets/images/gash.png" alt="">
+                                        <span class="icon-focus"></span>
+                                        <span class="mbr-gallery-title mbr-fonts-style display-7">GASH AR Collectable</span>
+                                    </div>
+                                </div>
+                                <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false" data-tags="Awesome">
+                                    <div href="#lb-gallery3-1d" data-slide-to="5" data-toggle="modal">
+                                        <img src="assets/images/fevr.png" alt="">
+                                        <span class="icon-focus"></span>
+                                        <span class="mbr-gallery-title mbr-fonts-style display-7">FEVR Fear Experience VR</span>
+                                    </div>
+                                </div>
+                                <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false" data-tags="Responsive">
+                                    <div href="#lb-gallery3-1d" data-slide-to="6" data-toggle="modal">
+                                        <img src="assets/images/matcher.png" alt="">
+                                        <span class="icon-focus"></span>
+                                        <span class="mbr-gallery-title mbr-fonts-style display-7">Sweetest Racer</span>
+                                    </div>
+                                </div>
+                                <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false" data-tags="Animated">
+                                    <div href="#lb-gallery3-1d" data-slide-to="7" data-toggle="modal">
+                                        <img src="assets/images/abyssall.png" alt="">
+                                        <span class="icon-focus"></span>
+                                        <span class="mbr-gallery-title mbr-fonts-style display-7">GGJ 2018 Abyssal Warriors (Unity3D)</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="clearfix"></div>
@@ -169,6 +177,18 @@
                                     </div>
                                     <div class="carousel-item">
                                         <img src="assets/images/btn3.png" alt="">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="assets/images/gash.png" alt="">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="assets/images/fevr.png" alt="">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="assets/images/matcherport.png" alt="">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="assets/images/abyssalbig.png" alt="">
                                     </div>
                                 </div>
                                 <a class="carousel-control carousel-control-prev" role="button" data-slide="prev" href="#lb-gallery3-1d">
@@ -242,7 +262,7 @@
                                     <div href="#lb-gallery3-1q" data-slide-to="5" data-toggle="modal">
                                         <img src="assets/images/runemover-800x450.png" alt="">
                                         <span class="icon-focus"></span>
-                                        <span class="mbr-gallery-title mbr-fonts-style display-7">PewDiePie Jam Run'em Over (Unity 3D)</span>
+                                        <span class="mbr-gallery-title mbr-fonts-style display-7">Run'em Over (Unity 3D)</span>
                                     </div>
                                 </div>
                                 <div class="mbr-gallery-item mbr-gallery-item--pNaN" data-video-url="false" data-tags="Responsive">
@@ -465,41 +485,43 @@
                     </div>
                 </div>
                 <div class="card p-3 col-12 col-md-6 col-lg-3">
-                        <div class="card-wrapper">
-                            <div class="card-img">
-                                <img src="assets/images/151383-v3.jpg" alt="" title="" media-simple="true">
-                            </div>
-                            <div class="card-box">
-                                <h4 class="card-title pb-3 mbr-fonts-style display-7">Abyssal Warriors</h4>
-                                <p class="mbr-text mbr-fonts-style display-7">XNA Monogame
-                                    <br>Silver Prize in Proyecto Multimedia (2013)
-                                    <br>Xbox 360 Arcade Game
-                                    <br>Shooter game, up to 2 players
-                                    <br>
-                                    <br>
-                                    <a href="./downloads/STZ.zip" class="text-secondary">Dowload (PC)</a>
-                                </p>
-                            </div>
+                    <div class="card-wrapper">
+                        <div class="card-img">
+                            <img src="assets/images/abyssall.png" alt="" title="" media-simple="true">
+                        </div>
+                        <div class="card-box">
+                            <h4 class="card-title pb-3 mbr-fonts-style display-7">Abyssal Warriors</h4>
+                            <p class="mbr-text mbr-fonts-style display-7">Made in 48 hours
+                                <br>Up to 4 players
+                                <br>Versus split-screen
+                                <br>Amazing submarine battles!
+                                <br>
+                                <br>
+                                <a href="https://globalgamejam.org/2018/games/abyssal-warriors" class="text-danger">More</a>
+                                <br>
+                                <a href="https://ggj.s3.amazonaws.com/games/2018/01/64741/exec/CHAWY/release.7z" class="text-secondary">Dowload (PC)</a>
+                            </p>
                         </div>
                     </div>
-                    <div class="card p-3 col-12 col-md-6 col-lg-3">
-                        <div class="card-wrapper">
-                            <div class="card-img">
-                                <img src="assets/images/gravitydreams1.png" alt="" title="" media-simple="true">
-                            </div>
-                            <div class="card-box">
-                                <h4 class="card-title pb-3 mbr-fonts-style display-7">Gash</h4>
-                                <p class="mbr-text mbr-fonts-style display-7">Mobile Game.
-                                    <br>Teaches about gravity.
-                                    <br>A few levels.
-                                    <br>Classic go from A to B using gravity and space stuff.
-                                    <br>
-                                    <br>
-                                    <a href="./downloads/GravityDreamsAndroid.zip" class="text-warning">Demo (Android)</a>
-                                </p>
-                            </div>
+                </div>
+                <div class="card p-3 col-12 col-md-6 col-lg-3">
+                    <div class="card-wrapper">
+                        <div class="card-img">
+                            <img src="assets/images/gash.png" alt="" title="" media-simple="true">
+                        </div>
+                        <div class="card-box">
+                            <h4 class="card-title pb-3 mbr-fonts-style display-7">GASH</h4>
+                            <p class="mbr-text mbr-fonts-style display-7">Merch app.
+                                <br>Collectables.
+                                <br>Auto update models.
+                                <br>3D model streams.
+                                <br>
+                                <br>
+                                <a href="https://play.google.com/store/apps/details?id=com.ajba.gash" class="text-warning">Download (Android)</a>
+                            </p>
                         </div>
                     </div>
+                </div>
             </div>
         </div>
     </section>
@@ -667,7 +689,7 @@
                 </div>
                 <div class="row row-copirayt">
                     <p class="mbr-text mb-0 mbr-fonts-style mbr-white display-7">
-                        © Copyright 2017 Abraham Ahumada - All Rights Reserved
+                        © Copyright 2018 Abraham Ahumada - All Rights Reserved
                     </p>
                 </div>
             </div>
@@ -693,7 +715,8 @@
     <script src="assets/theme/js/script.js"></script>
     <script src="assets/mobirise-gallery/player.min.js"></script>
     <script src="assets/mobirise-gallery/script.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="assets/js/vue/viewGallery.js"></script>
 
 </body>
 

@@ -26,7 +26,7 @@ const mixin = {
                 degree2:"I have a Engineer degree in Software Development at CETI (2013-2017).",
                 hobbies:"I love space stuff and I like to play musical instruments.",
                 meinwork:"I am a self-taught person, but I know when I need help, I am capable of work in teams and I can work under-pressure.",
-                programminglangs:"Programming Languages",
+                programminglangs:"Programming Languajes",
                 workexperience:"Work Experience",
                 frameworksandtools:"As a Developer I have selected several tools and frameworks to make development process more comfortable and painless, so I could deliver better experiences in less time.",
                 frameworksandtoolstitle:"Frameworks and Tools",
@@ -34,7 +34,7 @@ const mixin = {
                 languagesandostitle:"Languajes and OS",
                 myworktitle:"My work",
                 myworkdesc:"Check a Few Examples of my Work, there are happy animals and confused robots, my first public project and my last project in development.",
-                mywork:"",
+                mywork:"Through years I have developed ideas, concepts and projects, I have worked with people how does not speak my native languaje (IVG Jam), and I have worked in large teams, here are a few examples.",
                 lastcalltittle:"Wait! (Beep!)",
                 lastcall:"Are you interested in my job? Lets talk about your proyects or ideas, I know we can build something amazing together. Hey! you must leave a message after the Beep!",
                 name:"Name",
@@ -77,7 +77,7 @@ const mixin = {
                 languagesandostitle:"Idiomas y Sistemas Operativos",
                 myworktitle:"Mi trabajo",
                 myworkdesc:"Desde súper animales hasta robots confundidos, puesdes ver mis proyectos en este enlace",
-                mywork:"",
+                mywork:"Durante años he desarrollado proyectos, aqui puedes ver algunos de estos trabajos, desde juegos para GGJ, hasta trabajos freelance o prototipos",
                 lastcalltittle:"¡Hey! Espera",
                 lastcall:"¿Te gusto mi trabajo? ¿Tienes algun proyecto que desarrollar?",
                 name:"Nombre",
@@ -108,21 +108,9 @@ const mixin = {
     }
 };
 document.addEventListener("DOMContentLoaded", function () {
-    console.log("ready");
-    app = new Vue({
-        mixins: [mixin],
-        el: '#app'
-
-    });
+    console.log("ready gal");
+    app = new Vue({mixins: [mixin],el: '#app'});
     app = new Vue({mixins: [mixin],el: '#app-menu' });
     app = new Vue({mixins: [mixin],el: '#app-intro' });
-    app = new Vue({mixins: [mixin],el: '#app-about-me' });
-    app = new Vue({mixins: [mixin],el: '#app-tools-title' });
-    app = new Vue({mixins: [mixin],el: '#app-tools' });
-    app = new Vue({mixins: [mixin],el: '#app-experience' });
-    app = new Vue({mixins: [mixin],el: '#app-languages-title' });
-    app = new Vue({mixins: [mixin],el: '#app-languages' });
-    app = new Vue({mixins: [mixin],el: '#app-work' });
-    app = new Vue({mixins: [mixin],el: '#app-contact' });
-    app = new Vue({mixins: [mixin],el: '#app-form' });
+    
 });
