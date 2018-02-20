@@ -91,15 +91,7 @@ const mixin = {
             },
         }
     },
-    create: function () {
-        if (localStorage.getItem("language")!==undefined) {
-            this.language = localStorage.getItem("language");
-        } else {
-            localStorage.setItem("language","en");
-            this.language = localStorage.getItem("language");
-        }
-    },
-    mounted: function () {
+    beforeCreate: function () {
         if (localStorage.getItem("language")!==undefined) {
             this.language = localStorage.getItem("language");
         } else {
