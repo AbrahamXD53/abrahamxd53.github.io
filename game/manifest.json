@@ -1,0 +1,112 @@
+{
+    "dir": "ltr",
+    "lang": "tl",
+    "name": "Asada Engine Demo",
+    "scope": "/game/",
+    "display": "fullscreen",
+    "start_url": "https://abrahamxd53.github.io/game/",
+    "short_name": "AsadaDemo",
+    "theme_color": "transparent",
+    "description": "Asada Engine Demo",
+    "orientation": "any",
+    "background_color": "transparent",
+    "related_applications": [],
+    "prefer_related_applications": false,
+    "icons": [
+        {
+            "src": "/images/1fec285a-a802-8771-6654-dbaba6b161f5.webPlatform.png",
+            "sizes": "44x44",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/e8f5477e-dfb9-baa5-8d37-e89400cbcfb9.webPlatform.png",
+            "sizes": "48x48",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/windows10/SplashScreen.scale-200.png.png",
+            "sizes": "1240x600",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/ab0904b6-d4ca-5ba0-ce59-dcceec8e94ca.webPlatform.png",
+            "sizes": "300x300",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/3fac3743-48e3-feab-35ba-ab73dc1f0a89.webPlatform.png",
+            "sizes": "150x150",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/1b23d369-d64e-52eb-e44c-91a5f1ddcec0.webPlatform.png",
+            "sizes": "88x88",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/e10a4f07-9315-70cf-9cae-d5c2a6520e6f.webPlatform.png",
+            "sizes": "24x24",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/a60f3773-80eb-8855-26ce-5de322a93fc3.webPlatform.png",
+            "sizes": "50x50",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/de8bec85-b719-44b9-30d2-dba0162edc86.webPlatform.png",
+            "sizes": "620x300",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/e9f13c42-fd47-dd00-f649-b5a5bbd196cc.webPlatform.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/4300ed04-875b-8811-9b5e-ddbe40af3c2f.webPlatform.png",
+            "sizes": "144x144",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/b8a8375a-f471-418b-2d6a-6bfb945550cf.webPlatform.png",
+            "sizes": "96x96",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/435e6668-af3d-525c-483d-49a713e44dad.webPlatform.png",
+            "sizes": "72x72",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/ff6a61e6-8eb9-6745-5c19-60efd7fa80dd.webPlatform.png",
+            "sizes": "36x36",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/ios/ios-appicon-1024-1024.png",
+            "sizes": "1024x1024",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/efab40a0-592d-0446-f1c6-ffcbe4bc5dc6.webPlatform.png",
+            "sizes": "180x180",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/2c0d4015-2a46-091c-d85b-5cb8453feaf3.webPlatform.png",
+            "sizes": "152x152",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/2d08421c-022d-8609-e489-518f68dcf294.webPlatform.png",
+            "sizes": "120x120",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/bcb2b55f-c129-92de-68e9-3a41a3aa1efe.webPlatform.png",
+            "sizes": "76x76",
+            "type": "image/png"
+        }
+    ]
+}
