@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>Abraham Ahumada's Portfolio</title>
+
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="css/colors1.css" id="dark">
+    <link rel="stylesheet alternate" href="css/colors2.css" id="light">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@master/devicon.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+</head>
+
+<body>
+    <div class="main-container" id="main-container">
+        <aside class="main-panel" id="profile">
+            <header class="header-banner">
+                <img src="images/bg_profile.webp" alt="" class="img-full-width">
+                <img src="images/profile-min-alt.webp" alt="" class="img-profile">
+                <div class="lang-selector" v-on:click="changeLanguage">
+                    <i class="fas fa-language"></i> {{content[language]['OTHER_LANGUAJE']}}
+                </div>
+                <div class="theme-selector" v-on:click="changeTheme">
+                    <i class="fas fa-eye"></i> {{content[language][theme]}}
+                </div>
+            </header>
+            <div class="profile-info">
+                <h1>Abraham Ahumada</h1>
+                <h2 class="dev-title"><i class="fas fa-code"></i> {{content[language]['DEV_TITLE']}}</h2>
+                <hr></hr>
+                <p class="profile-text">{{content[language]['BODY']}}</p>
+                <h3 class="h3-link"><a href="mailto:mp2014000@gmail.com" class="soft-link"><i
+                            class="fas fa-mail-bulk"></i>mp2014000@gmail.com</a>
+                </h3>
+                <h3 class="h3-link"><a href="https://www.linkedin.com/in/abraham-ahumada/" class="soft-link"><i
+                            class="fab fa-linkedin"></i> LinkedIn</a></h3>
+                <h3 class="h3-link"><a href="https://app.codesignal.com/profile/myselfxd" class="soft-link"><i
+                            class="fa fa-code"></i>CodeSignal</a></h3>
+                <h3 class="h3-link"><a href="https://github.com/abrahamXD53" class="soft-link"><i
+                            class="fab fa-github"></i> Github</a>
+                </h3>
+                <br>
+                <h3>{{content[language]['LANGUAGES']}}</h3>
+                <div style="display: flex; justify-content: space-around;">
+                    <div style="width: 45%; display: inline-block; text-align: center;">
+                        <div class="meter">
+                            <span style="width: 100%"></span>
+                        </div>
+                        <h4><strong>{{content[language]['SPANISH']}}</strong></h4>
+                    </div>
+                    <div style="width: 45%; display: inline-block; text-align: center;">
+                        <div class="meter">
+                            <span style="width: 75%"></span>
+                        </div>
+                        <h4><strong>{{content[language]['ENGLISH']}}</strong></h4>
+                    </div>
+                </div>
+
+                <h3>{{content[language]['SKILLS']}}</h3>
+                <div class="skill-set">
+                    <i :class="[item.class, {'colored': item.hovered}]" class="skill-icon"
+                        @mouseover="item.hovered=true" @mouseleave="item.hovered=false"
+                        v-for="(item, index) in skills"><span class="tag tag-block"
+                            :class="{'tag-alt':index%2==0}">{{item.name}}</span></i>
+                </div>
+            </div>
+
+        </aside>
+        <aside class="content-panel">
+            <section class="content-section" id="work-experience">
+                <a id="section-1"></a>
+                <h2 class="section-title"><i class="fas fa-briefcase big-icon"></i> {{content[language]['WORK_TITLE']}}
+                </h2>
+                <div v-for="(job, job_index) in content[language]['JOBS']">
+                    <h3>{{job.TITLE}}</h3>
+                    <h3 class="date"><i class="far fa-calendar-alt"></i> {{job.START}} - <span class="tag"
+                            v-if="!job.END">{{content[language]['CURRENT']}}</span><span v-else>{{job.END}}</span>
+                    </h3>
+                    <p>
+                        <span v-html="job.DESCRIPTION"></span>
+                    </p>
+                    <hr class="hr-bar">
+                </div>
+
+            </section>
+            <section class="content-section" id="education">
+                <a id="section-2"></a>
+                <h2 class="section-title"><i class="fas fa-graduation-cap big-icon"></i>
+                    {{content[language]['EDUCATION_TITLE']}}</h2>
+                <div v-for="(degree, degree_index) in content[language]['EDUCATION']">
+                    <h3>{{degree.TITLE}}</h3>
+                    <h3 class="date"><i class="far fa-calendar-alt"></i> {{degree.START}} - <span class="tag"
+                            v-if="!degree.END">{{content[language]['CURRENT']}}</span><span v-else>{{degree.END}}</span>
+                    </h3>
+                    <p>
+                        <span v-html="degree.DESCRIPTION"></span>
+                    </p>
+                    <hr class="hr-bar">
+                </div>
+
+            </section>
+            <section class="content-section gallery-section" id="gallery">
+                <a id="section-gallery"></a>
+                <h2 class="section-title gallery-title"><i class="fas fa-gamepad big-icon"></i>
+                    {{content[language]['TITLE']}}</h2>
+                <div class="gallery">
+                    <div class="container-img" v-for="(item, index) in items" v-if="item.technologies.indexOf('')==-1">
+                        <img v-bind:src="item.image" alt="" :id="['g' + index]">
+                        <div class="overlay" v-on:click="openPreview(item, index)">
+                            <div class="gallery-text">
+                                {{item.name}}<br>
+                                ({{item.date}})
+                                <br>
+                                <br>
+                                <button class="btn btn-primary big-button">{{content[language]['MORE']}}</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+
+            <section class="content-section content-section-videos" id="video-section">
+                <a id="section-4"></a>
+                <h2 class="section-title gallery-title "><i class="far fa-images big-icon"></i>
+                    {{content[language]['TITLE']}}</h2>
+                <div class='embed-container' v-for="video in videos">
+                    <iframe v-bind:src="video" frameborder='0' allowfullscreen></iframe>
+                </div>
+
+            </section>
+
+            <section class="content-section gallery-section" id="gallery-simple">
+                <a id="section-gallery"></a>
+                <h2 class="section-title gallery-title"><i class="fas fa-gamepad big-icon"></i>
+                    {{content[language]['TITLE']}}</h2>
+                <div class="gallery">
+                    <div class="container-img" v-for="(item, index) in items">
+                        <img v-bind:src="item.image" alt="" :id="['p' + index]">
+                        <div class="overlay" v-on:click="openPreview(item, index)">
+                            <div class="gallery-text">
+                                {{item.name}}<br>
+                                ({{item.date}})
+                                <br>
+                                <br>
+                                <button class="btn btn-primary big-button">{{content[language]['MORE']}}</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <footer class="footer-content" id="footer-app">
+                {{year}} Abraham Ahumada<br> <br>
+                {{content[language]['BODY']}}
+            </footer>
+        </aside>
+
+
+    </div>
+    <div class="modal-details" id="item-preview" v-if="visible">
+        <div class="modal-background" v-on:click.self="close">
+            <div class="modal-content" :class="{'modal-openend':visible}">
+                <div class="modal-gallery">
+
+                    <div class="modal-preview-background" v-if="!payload.gallery[selectedItem].video"
+                        :style="{ backgroundImage: `url(${payload.gallery[selectedItem].url})` }"></div>
+                    <div class="modal-preview" v-if="!payload.gallery[selectedItem].video"
+                        :style="{ backgroundImage: `url(${payload.gallery[selectedItem].url})` }"></div>
+                    <div class='embed-container' v-if="payload.gallery[selectedItem].video">
+                        <iframe v-bind:src="payload.gallery[selectedItem].url" @load="iframeLoaded" frameborder='0'
+                            allowfullscreen></iframe>
+                    </div>
+                    <div class="modal-preview loading-background"
+                        v-if="payload.gallery[selectedItem].video && loadingVideo"
+                        :style="{ backgroundImage: `url(${defaultImageUrl})` }">
+                        <div class="loading-text">{{content[language]['LOADING']}}</div>
+                    </div>
+
+                    <div class="modal-gallery-next" v-on:click.self="nextElement">
+                    </div>
+                    <div class="modal-gallery-prev" v-on:click.self="prevElement">
+                    </div>
+
+                    <button class="modal-close-button" v-on:click="close">
+                        <i class="fa fa-times-circle"></i>
+                    </button>
+                </div>
+
+                <div class="modal-description">
+                    <div class="modal-description-content">
+                        <h3 class="text-right"><i class="fa fa-calendar-alt"></i> {{payload.date}}</h3>
+                        <h2 class="preview-title"> {{payload.name}}</h2>
+                        <!-- <h4 class="tech-section text-right">Technologies:</h4> -->
+                        <div class="tag-cloud">
+                            <span class="small-tag" v-for="(item, index) in payload.technologies">{{item}}</span>
+                        </div>
+                        <span v-html="payload.rawBody"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
