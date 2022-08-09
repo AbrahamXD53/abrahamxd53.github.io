@@ -136,6 +136,124 @@ var galleryApp = new Vue({
         language: 'en',
         items: [
             {
+                name: 'Wrande',
+                image: 'images/wrande/kSzfct.gif',
+                template: `<p class="justify">%PART% <span class="blue-color"><b>%ROLES%</b></span><br><br>
+                            %BODY%
+                        </p>
+                        <div class="space-block"></div>
+                        <a href="https://myselfxd.itch.io/wrande" class="btn btn-primary big-button">%DOWNLOAD%</a>
+                        `,
+                content: {
+                    en: {
+                        part: 'Solo Dev ',
+                        roles: 'Programmer C#',
+                        body: `Survive waves of monsters that escaped from laboratory, small enemies are faster than big enemies.
+                        <br>
+                        <br><strong>Controls:</strong>
+                        <br>
+                        <br><span class="blue-color">Keyboard</span>
+                        <ul>
+                        <li>WASD -  Move</li>
+                        <li>Mouse - Aim</li>
+                        <li>Left click - Left weapon</li>
+                        <li>Right click - Right weapon</li>
+                        <li>R - Reset/Retry</li>
+                        </ul>
+                        <br>
+
+                        <span class="blue-color">Gamepad</span>
+                        <br>
+                        <br>
+                        
+                        <li>Left stick - Move</li>
+                        <li>Right stick - Aim</li>
+                        <li>Left trigger - Left  weapon</li>
+                        <li>Right trigger - Right weapon</li>
+                        <li>Select  - Reset/Retry</li>`,
+                        download: 'Download it here!'
+                    },
+                    es: {
+                        part: 'Proyecto en solitario ',
+                        roles: 'Programador C#',
+                        body: `Sobrevive a oleadas de monstruos que escaparon de un laboratorio, los enemigos chicos son más rápidos que los grandes
+                        <br>
+                        <br><strong>Controles:</strong>
+                        <br>
+                        <br><span class="blue-color">Teclado</span>
+                        <ul>
+                        <li>WASD -  Mover</li>
+                        <li>Mouse - Apuntar</li>
+                        <li>Clic Izq - Arma Izquierda</li>
+                        <li>Clic Der - Arma Derecha</li>
+                        <li>R - Reiniciar/Reintentar</li>
+                        </ul>
+                        <br>
+
+                        <span class="blue-color">Gamepad</span>
+                        <br>
+                        <br>
+                        
+                        <li>Palanca Izq - Mover</li>
+                        <li>Palanca Der - Apunta</li>
+                        <li>Gatillo Izq - Arma Izquierda/li>
+                        <li>Gatillo Der - Arma Derecha</li>
+                        <li>Select  - Reiniciar/Reintentar</li>.`,
+                        download: '¡Descárgalo aquí!'
+                    },
+                },
+                rawBody: '',
+                date: '2022',
+                technologies: ['Unity'],
+                gallery: [
+                    { video: false, url: 'images/wrande/kSzfct.gif' },
+                    { video: false, url: 'images/wrande/qBb1gn.png' },
+                    { video: false, url: 'images/wrande/dw4dz+.png' },
+                    { video: false, url: 'images/wrande/qBb1gn.png' }
+                ]
+            },
+            {
+                name: 'uTabletop',
+                image: 'images/utabletop/utabletop2.png',
+                template: `<p class="justify">%PART% <span class="blue-color"><b>%ROLES%</b></span><br><br>
+                            %BODY%
+                        </p>
+                        <div class="space-block"></div>
+                        <a href="https://abrahamxd53.github.io/downloads/uTabletop.zip" class="btn btn-secondary big-button">%DOWNLOAD_PC%</a><br>
+                        <div class="space-block-small"></div>
+                        <a href="https://abrahamxd53.github.io/downloads/uTabletop.apk" class="btn btn-primary big-button">%DOWNLOAD_ANDROID%</a>
+                        `,
+                content: {
+                    en: {
+                        part: 'Solo Dev ',
+                        roles: 'Programmer C#',
+                        body: `Play your favorite boardgames with your friends, up-to 8 players online. Available languages: English, Spanish, Portuguese.<br><br>Crossplatform:<br>
+                        <ul><li>Web (Chrome, Opera, Edge)</li><li>Android</li><li>Windows</li>`,
+                        download_pc: 'Download (Windows)',
+                        download_android: 'Download (Android)'
+                    },
+                    es: {
+                        part: 'Proyecto en solitario ',
+                        roles: 'Programador C#',
+                        body: `Juega tus favoritos juegos de mesa con hasta 8 jugadores en línea. Idiomas disponibles: Ingles, Español, Portugues.<br><br>Compatible con las siguientes plataformas<br>
+                        <ul><li>Web (Chrome, Opera, Edge)</li><li>Android</li><li>Windows</li>`,
+                        download_pc: 'Descargar (Windows)',
+                        download_android: 'Descargar (Android)',
+                    },
+                },
+                rawBody: '',
+                date: '2021',
+                technologies: ['Unity', 'Photon 2', 'Webserver'],
+                gallery: [
+                    { video: false, url: 'images/utabletop/utabletop2.png' },
+                    { video: false, url: 'images/utabletop/297384934_477548227057228_2439296579233793083_n.jpg' },
+                    { video: false, url: 'images/utabletop/297233204_551717480069482_6271595084088326293_n.jpg' },
+                    { video: false, url: 'images/utabletop/297384934_477548227057228_2439296579233793083_n.jpg' },
+                    { video: false, url: 'images/utabletop/utabletop6.png' },
+                    { video: false, url: 'images/utabletop/utabletop5.png' }
+                ]
+            },
+            {
                 name: 'Brainfuck 2D',
                 image: 'images/brainfuck/vAP2fg.webp',
                 template: `<p class="justify">%PART% <span class="blue-color"><b>%ROLES%</b></span><br><br>
@@ -1478,25 +1596,34 @@ var experienceApp = new Vue({
                 WORK_TITLE: 'Work Experience',
                 JOBS: [
                     {
-                        TITLE: 'Web Developer - Gameloft',
-                        START: 'Apr 2018',
+                        TITLE: 'Lead Game Developer - Bowhead Health',
+                        START: 'Feb 2022',
                         END: false,
+                        DESCRIPTION: `Game development, native mobile plugin development, fast prototype development.
+                        <br><span class="work-skills">C#, Unity, Java, Swift, Metamask, ETH Blockchain</span><br>`
+                    },
+                    {
+                        TITLE: 'Full Stack Developer - Gameloft',
+                        START: 'Apr 2018',
+                        END: 'Feb 2022',
                         DESCRIPTION: `Developed and implemented solutions for international game distribution.
-                        <br>PHP, MySQL, JS, CSS, HTML<br>`
+                        <br><span class="work-skills">PHP, MySQL, JS, CSS, HTML</span><br>`
                     },
                     {
                         TITLE: 'Research & Development - Gameloft',
                         START: 'Sep 2017',
                         END: 'Apr 2018',
                         DESCRIPTION: `iOS Game support, including porting games from x86 to x64. <br>
-                        Game bug fixes and update code base. <br>C++, Objetive-C, GLSL`
+                        Game bug fixes and update code base.
+                        <br><span class="work-skills">C++, Objetive-C, GLSL</span><br>`
                     },
                     {
                         TITLE: 'Back-end Developer - AORI Brand Media',
                         START: 'Sep 2016',
                         END: 'Sep 2017',
                         DESCRIPTION: `Built cross platform solutions for Android and iOS.<br>
-                        Hybrid mobile app development. <br>PHP, Laravel, MySQL, Ionic`
+                        Hybrid mobile app development.
+                        <br><span class="work-skills">PHP, Laravel, MySQL, Ionic</span>`
                     }
                 ]
             },
@@ -1505,24 +1632,34 @@ var experienceApp = new Vue({
                 WORK_TITLE: 'Experiencia Laboral',
                 JOBS: [
                     {
-                        TITLE: 'Desarrollador Web - Gameloft',
-                        START: 'Abr 2018',
+                        TITLE: 'Líder Desarrollador de Juegos - Bowhead Health',
+                        START: 'Feb 2022',
                         END: false,
-                        DESCRIPTION: `Desarrollar e impementar soluciones para la distribución de juegos a nivel internacional.<br>PHP, MySQL, JS, CSS, HTML<br>`
+                        DESCRIPTION: `Desarrollo de juegos, Desarrollo de plugins nativos, desarrollo rápido de prototipos.
+                        <br><span class="work-skills">C#, Unity, Java, Swift, Metamask, ETH Blockchain</span><br>`
+                    },
+                    {
+                        TITLE: 'Desarrollador Full Stack - Gameloft',
+                        START: 'Abr 2018',
+                        END: 'Feb 2022',
+                        DESCRIPTION: `Desarrollar e impementar soluciones para la distribución de juegos a nivel internacional.
+                        <br><span class="work-skills">PHP, MySQL, JS, CSS, HTML</span><br>`
                     },
                     {
                         TITLE: 'Investigación y Desarrollo - Gameloft',
                         START: 'Sep 2017',
                         END: 'Abr 2018',
                         DESCRIPTION: `iOS soporte a juegos, incluido actualizar el código de plataformas x86 a x64.<br>
-                        Corrección de errores y actualización del código base.<br>C++, Objetive-C, GLSL`
+                        Corrección de errores y actualización del código base.
+                        <br><span class="work-skills">C++, Objetive-C, GLSL</span><br>`
                     },
                     {
                         TITLE: 'Desarollador Back-end - AORI Brand Media',
                         START: 'Sep 2016',
                         END: 'Sep 2017',
                         DESCRIPTION: `Desarrollo de soluciones multiplataforma para Android y iOS.<br>
-                        Desarrollo de aplicaciones hibrídas. <br>PHP, Laravel, MySQL, Ionic`
+                        Desarrollo de aplicaciones hibrídas.
+                        <br><span class="work-skills">PHP, Laravel, MySQL, Ionic</span>`
                     }
                 ]
             }
@@ -1649,7 +1786,7 @@ var profileApp = new Vue({
             { name: 'PHP', class: 'devicon-php-plain', hovered: false },
             { name: 'JS', class: 'devicon-javascript-plain', hovered: false },
             { name: 'Java', class: 'devicon-java-plain', hovered: false },
-            { name: 'Python', class: 'devicon-python-plain', hovered: false },
+            { name: 'Flutter', class: 'devicon-flutter-plain', hovered: false },
             { name: 'MySQL', class: 'devicon-mysql-plain', hovered: false },
             { name: 'CSS3', class: 'devicon-css3-plain', hovered: false },
             { name: 'Unity', class: 'devicon-unity-original', hovered: false },
