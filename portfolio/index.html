@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@master/devicon.min.css">
     <link rel="stylesheet" href="css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js"></script>
+    <script src="js/vue.min.js"></script>
 
 </head>
 
@@ -34,7 +34,8 @@
             <div class="profile-info">
                 <h1>Abraham Ahumada</h1>
                 <h2 class="dev-title"><i class="fas fa-code"></i> {{content[language]['DEV_TITLE']}}</h2>
-                <hr></hr>
+                <hr>
+                </hr>
                 <p class="profile-text">{{content[language]['BODY']}}</p>
                 <h3 class="h3-link"><a href="mailto:mp2014000@gmail.com" class="soft-link"><i
                             class="fas fa-mail-bulk"></i>mp2014000@gmail.com</a>
@@ -78,7 +79,7 @@
                 <a id="section-1"></a>
                 <h2 class="section-title"><i class="fas fa-briefcase big-icon"></i> {{content[language]['WORK_TITLE']}}
                 </h2>
-                <div v-for="(job, job_index) in content[language]['JOBS']">
+                <div v-for="(job, job_index) in content[language]['JOBS']" v-if="!job.requiresFull">
                     <h3>{{job.TITLE}}</h3>
                     <h3 class="date"><i class="far fa-calendar-alt"></i> {{job.START}} - <span class="tag"
                             v-if="!job.END">{{content[language]['CURRENT']}}</span><span v-else>{{job.END}}</span>
@@ -111,7 +112,8 @@
                 <h2 class="section-title gallery-title"><i class="fas fa-gamepad big-icon"></i>
                     {{content[language]['TITLE']}}</h2>
                 <div class="gallery">
-                    <div class="container-img" v-for="(item, index) in items" v-if="item.technologies.indexOf('')==-1">
+                    <div class="container-img" v-for="(item, index) in items"
+                        v-if="item.technologies.indexOf('')==-1 && !item.requiresFull">
                         <img v-bind:src="item.image" alt="" :id="['g' + index]">
                         <div class="overlay" v-on:click="openPreview(item, index)">
                             <div class="gallery-text">

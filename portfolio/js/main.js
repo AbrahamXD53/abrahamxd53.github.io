@@ -114,11 +114,11 @@ var videoSection = new Vue({
             }
         },
         videos: [
-            'https://www.youtube-nocookie.com/embed/RXnKnn1vSXU',
+            //'https://www.youtube-nocookie.com/embed/RXnKnn1vSXU',
             'https://www.youtube-nocookie.com/embed/935Y_EXmv5Q',
             'https://www.youtube-nocookie.com/embed/rJN2akh4OCY',
             'https://www.youtube-nocookie.com/embed/Y9rKDw6bKXY',
-            // 'https://www.youtube-nocookie.com/embed/L36aRfMXzq4',
+            //'https://www.youtube-nocookie.com/embed/L36aRfMXzq4',
         ]
     },
     created() {
@@ -136,6 +136,7 @@ var galleryApp = new Vue({
         language: 'en',
         items: [
             {
+                requiresFull:false,
                 name: 'Wrande',
                 image: 'images/wrande/kSzfct.gif',
                 template: `<p class="justify">%PART% <span class="blue-color"><b>%ROLES%</b></span><br><br>
@@ -148,7 +149,7 @@ var galleryApp = new Vue({
                     en: {
                         part: 'Solo Dev ',
                         roles: 'Programmer C#',
-                        body: `Survive waves of monsters that escaped from laboratory, small enemies are faster than big enemies.
+                        body: `Survive waves of monsters that escaped from a laboratory, small enemies are faster than big enemies.
                         <br>
                         <br><strong>Controls:</strong>
                         <br>
@@ -213,6 +214,7 @@ var galleryApp = new Vue({
                 ]
             },
             {
+                requiresFull:false,
                 name: 'uTabletop',
                 image: 'images/utabletop/utabletop2.png',
                 template: `<p class="justify">%PART% <span class="blue-color"><b>%ROLES%</b></span><br><br>
@@ -254,6 +256,7 @@ var galleryApp = new Vue({
                 ]
             },
             {
+                requiresFull:false,
                 name: 'Brainfuck 2D',
                 image: 'images/brainfuck/vAP2fg.webp',
                 template: `<p class="justify">%PART% <span class="blue-color"><b>%ROLES%</b></span><br><br>
@@ -290,6 +293,7 @@ var galleryApp = new Vue({
                 ]
             },
             {
+                requiresFull:false,
                 name: 'Grand Michi Auto',
                 image: 'images/gma/gma.webp',
                 template: `<p class="justify">%PART% <span class="blue-color"><b>%ROLES%</b></span><br><br>
@@ -322,6 +326,7 @@ var galleryApp = new Vue({
                 ]
             },
             {
+                requiresFull:false,
                 name: 'Baking Crew',
                 image: 'images/baking_crew/baking-crew.webp',
                 template: `<p class="justify">%PART% <span class="blue-color"><b>%ROLES%</b></span><br><br>
@@ -361,6 +366,7 @@ var galleryApp = new Vue({
                 ]
             },
             {
+                requiresFull:false,
                 name: 'Derm Farm',
                 image: 'images/derm_farm/derm-farm.webp',
                 template: `<p class="justify">%PART% <span class="blue-color"><b>%ROLES%</b></span><br><br>
@@ -396,6 +402,7 @@ var galleryApp = new Vue({
                 ]
             },
             {
+                requiresFull:false,
                 name: 'Fast Fuga',
                 image: 'images/fast_fuga/Fast_Fuga-min.webp',
                 template: `<p class="justify">%PART% <span class="blue-color"><b>%ROLES%</b></span><br><br>
@@ -433,6 +440,7 @@ var galleryApp = new Vue({
                 ]
             },
             {
+                requiresFull:false,
                 name: 'J-Force',
                 image: 'images/j_force/j_force.webp',
                 template: `<p class="justify">%PART% <span class="blue-color"><b>%ROLES%</b></span><br><br>
@@ -470,6 +478,7 @@ var galleryApp = new Vue({
                 ]
             },
             {
+                requiresFull:false,
                 name: 'Jumping Crew',
                 image: 'images/jumping_crew/feature.webp',
                 template: `<p class="justify">%PART% <span class="blue-color"><b>%ROLES%</b></span><br><br>
@@ -506,6 +515,7 @@ var galleryApp = new Vue({
                 ]
             },
             {
+                requiresFull:false,
                 name: 'Sprite to 3D',
                 image: 'images/sprite_to_3d/animatedpreview.webp',
                 template: `<p class="justify">%PART% <span class="blue-color"><b>%ROLES%</b></span><br><br>
@@ -561,6 +571,7 @@ var galleryApp = new Vue({
                 ]
             },
             {
+                requiresFull:false,
                 name: 'House House Revolution',
                 image: 'images/house_house_revolution/House_House_Revolution7-min.webp',
                 template: `<p class="justify">%PART% <span class="blue-color"><b>%ROLES%</b></span><br><br>
@@ -627,6 +638,7 @@ var galleryApp = new Vue({
                 ]
             },
             {
+                requiresFull:true,
                 name: 'One Last Bullet',
                 image: 'images/olb.webp',
                 template: `<p class="justify">%PART% <span class="blue-color"><b>%ROLES%</b></span><br><br>
@@ -658,6 +670,7 @@ var galleryApp = new Vue({
                 ]
             },
             {
+                requiresFull:false,
                 name: 'Terminus',
                 image: 'images/terminus/terminus-login.webp',
                 template: `<p class="justify">%PART% <span class="blue-color"><b>%ROLES%</b></span><br><br>
@@ -701,6 +714,7 @@ var galleryApp = new Vue({
                 ]
             },
             {
+                requiresFull:false,
                 name: 'Asada Game Engine',
                 image: 'images/asada_game_engine/asada_engine.webp',
                 template: `<p class="justify">%PART% <span class="blue-color"><b>%ROLES%</b></span><br><br>
@@ -782,6 +796,7 @@ var galleryApp = new Vue({
                 ]
             },
             {
+                requiresFull:false,
                 name: 'Abyssal Warriors',
                 image: 'images/abyssal_warriors/abyssall.webp',
                 template: `<p class="justify">%PART% <span class="blue-color"><b>%ROLES%</b></span><br><br>
@@ -853,10 +868,8 @@ var galleryApp = new Vue({
                     { video: false, url: 'images/abyssal_warriors/abyssal_warriors4-min.webp' },
                 ]
             },
-
-
-
             {
+                requiresFull:false,
                 name: 'Better than Nothing',
                 image: 'images/better_than_nothing/better_than_nothing.webp',
                 template: `<p class="justify">%PART% <span class="blue-color"><b>%ROLES%</b></span><br><br>
@@ -928,10 +941,8 @@ var galleryApp = new Vue({
                     { video: false, url: 'images/better_than_nothing/better_than_nothing5.webp' },
                 ]
             },
-
-
-
             {
+                requiresFull:true,
                 name: 'Gravity Dreams',
                 image: 'images/gravity_dreams/gravity_dreams-min.webp',
                 template: `<p class="justify">%PART% <span class="blue-color"><b>%ROLES%</b></span><br><br>
@@ -966,8 +977,8 @@ var galleryApp = new Vue({
                     { video: false, url: 'images/gravity_dreams/gravity_dreams3-min.webp' }
                 ]
             },
-
             {
+                requiresFull:false,
                 name: 'Run \'em over',
                 image: 'images/run_em_over/155082-v3.webp',
                 template: `<p class="justify">%PART% <span class="blue-color"><b>%ROLES%</b></span><br><br>
@@ -1008,6 +1019,7 @@ var galleryApp = new Vue({
             },
 
             {
+                requiresFull:true,
                 name: 'Animal Mess',
                 image: 'images/animal_mess/animalmess-min.webp',
                 template: `<p class="justify">%PART% <span class="blue-color"><b>%ROLES%</b></span><br><br>
@@ -1074,6 +1086,7 @@ var galleryApp = new Vue({
             //Animal mess
 
             {
+                requiresFull:true,
                 name: 'A Simple Game',
                 image: 'images/a_simple_game/simple_game.webp',
                 template: `<p class="justify">%PART% <span class="blue-color"><b>%ROLES%</b></span><br><br>
@@ -1116,6 +1129,7 @@ var galleryApp = new Vue({
                 ]
             },
             {
+                requiresFull:false,
                 name: 'Fallen Robot',
                 image: 'images/fallen_robot/FallenRobot-min.webp',
                 template: `<p class="justify">%PART% <span class="blue-color"><b>%ROLES%</b></span><br><br>
@@ -1170,6 +1184,7 @@ var galleryApp = new Vue({
                 ]
             },
             {
+                requiresFull:false,
                 name: 'Super Aventura Animal',
                 image: 'images/super_aventura_animal/saa-min.webp',
                 template: `<p class="justify">%PART% <span class="blue-color"><b>%ROLES%</b></span><br><br><br>
@@ -1230,6 +1245,7 @@ var galleryApp = new Vue({
 
 
             {
+                requiresFull:true,
                 name: 'Mi pobre corazoncito',
                 image: 'images/my_poor_little_heart/mpc.webp',
                 template: `<p class="justify">%PART% <span class="blue-color"><b>%ROLES%</b></span><br><br><br>
@@ -1278,6 +1294,7 @@ var galleryApp = new Vue({
             },
 
             {
+                requiresFull:true,
                 name: 'Shoot the Zombie',
                 image: 'images/shoot_the_zombie/stz.webp',
                 template: `<p class="justify">%PART% <span class="blue-color"><b>%ROLES%</b></span><br><br><br>
@@ -1360,6 +1377,12 @@ var galleryApp = new Vue({
                 document.getElementById('g' + id).scrollTo();
                 this.openPreview(this.items[id])
             }
+        }
+
+        if(params.hasOwnProperty('full')){
+            this.items.forEach(element => {
+                element.requiresFull = false;
+            });
         }
     },
     methods: {
@@ -1600,6 +1623,7 @@ var experienceApp = new Vue({
                         START: 'Feb 2022',
                         END: false,
                         DESCRIPTION: `Game development, native mobile plugin development, fast prototype development.
+                        <br>Third Party plugin integration (Firebase, Google Fit, Apple Health, Branch.io, Bytebrew)
                         <br><span class="work-skills">C#, Unity, Java, Swift, Metamask, ETH Blockchain</span><br>`
                     },
                     {
@@ -1607,6 +1631,7 @@ var experienceApp = new Vue({
                         START: 'Apr 2018',
                         END: 'Feb 2022',
                         DESCRIPTION: `Developed and implemented solutions for international game distribution.
+                        <br>Subscriptions, on-deman content, payment validations.
                         <br><span class="work-skills">PHP, MySQL, JS, CSS, HTML</span><br>`
                     },
                     {
@@ -1618,6 +1643,7 @@ var experienceApp = new Vue({
                         <br><span class="work-skills">C++, Objetive-C, GLSL</span><br>`
                     },
                     {
+                        requiresFull:true,
                         TITLE: 'Back-end Developer - AORI Brand Media',
                         START: 'Sep 2016',
                         END: 'Sep 2017',
@@ -1636,6 +1662,7 @@ var experienceApp = new Vue({
                         START: 'Feb 2022',
                         END: false,
                         DESCRIPTION: `Desarrollo de juegos, Desarrollo de plugins nativos, desarrollo rápido de prototipos.
+                        <br>Integración de herreamientas de terceros (Firebase, Google Fit, Apple Health, Branch.io, Bytebrew)
                         <br><span class="work-skills">C#, Unity, Java, Swift, Metamask, ETH Blockchain</span><br>`
                     },
                     {
@@ -1643,6 +1670,7 @@ var experienceApp = new Vue({
                         START: 'Abr 2018',
                         END: 'Feb 2022',
                         DESCRIPTION: `Desarrollar e impementar soluciones para la distribución de juegos a nivel internacional.
+                        <br>Suscripciones, contenido bajo demanda, validación de pagos.
                         <br><span class="work-skills">PHP, MySQL, JS, CSS, HTML</span><br>`
                     },
                     {
@@ -1654,6 +1682,7 @@ var experienceApp = new Vue({
                         <br><span class="work-skills">C++, Objetive-C, GLSL</span><br>`
                     },
                     {
+                        requiresFull:true,
                         TITLE: 'Desarollador Back-end - AORI Brand Media',
                         START: 'Sep 2016',
                         END: 'Sep 2017',
@@ -1670,6 +1699,15 @@ var experienceApp = new Vue({
         EventBus.$on('update-language', (lang) => {
             this.language = lang
         })
+    },
+    mounted(){
+        let urlSearchParams = new URLSearchParams(window.location.search)
+        let params = Object.fromEntries(urlSearchParams.entries())
+
+        if(params.hasOwnProperty('full')){
+            this.content['en']['JOBS'][3].requiresFull = false;
+            this.content['es']['JOBS'][3].requiresFull = false;
+        }
     }
 })
 
@@ -1758,7 +1796,7 @@ var profileApp = new Vue({
             en: {
                 OTHER_LANGUAJE: 'Español',
                 DEV_TITLE: 'Game Developer',
-                BODY: `Hello! I love games and technology, I like to be part of games that make great experiences and
+                BODY: `I love games and technology, I like to be part of games that make great experiences and
                 memories in players around the world.`,
                 LANGUAGES: 'Languages',
                 SPANISH: 'Spanish',
@@ -1771,7 +1809,7 @@ var profileApp = new Vue({
             es: {
                 OTHER_LANGUAJE: 'English',
                 DEV_TITLE: 'Desarrollador de videojuegos',
-                BODY: `¡Hola! Me encantan los juegos y la tecnología, me gusta ser parte de juegos que crean grandes experiencias y memorias para los jugadores del mundo.`,
+                BODY: `Me encantan los juegos y la tecnología, me gusta ser parte de juegos que crean grandes experiencias y memorias para los jugadores del mundo.`,
                 LANGUAGES: 'Idiomas',
                 SPANISH: 'Español',
                 ENGLISH: 'Inglés',
@@ -1781,18 +1819,18 @@ var profileApp = new Vue({
             }
         },
         skills: [
+            { name: 'Unity', class: 'devicon-unity-original', hovered: false },
             { name: 'C#', class: 'devicon-csharp-plain', hovered: false },
             { name: 'C++', class: 'devicon-cplusplus-plain', hovered: false },
-            { name: 'PHP', class: 'devicon-php-plain', hovered: false },
             { name: 'JS', class: 'devicon-javascript-plain', hovered: false },
-            { name: 'Java', class: 'devicon-java-plain', hovered: false },
-            { name: 'Flutter', class: 'devicon-flutter-plain', hovered: false },
-            { name: 'MySQL', class: 'devicon-mysql-plain', hovered: false },
+            { name: 'Vue.js', class: 'devicon-vuejs-plain', hovered: false },
             { name: 'CSS3', class: 'devicon-css3-plain', hovered: false },
-            { name: 'Unity', class: 'devicon-unity-original', hovered: false },
-            { name: 'Laravel', class: 'devicon-laravel-plain', hovered: false },
+            { name: 'PHP', class: 'devicon-php-plain', hovered: false },
+            { name: 'Java', class: 'devicon-java-plain', hovered: false },
             { name: 'Android', class: 'devicon-android-plain', hovered: false },
-            { name: 'Vue.js', class: 'devicon-vuejs-plain', hovered: false }
+            { name: 'MySQL', class: 'devicon-mysql-plain', hovered: false },
+            { name: 'Laravel', class: 'devicon-laravel-plain', hovered: false },
+            { name: 'Flutter', class: 'devicon-flutter-plain', hovered: false },
         ]
     },
     created() {
