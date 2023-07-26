@@ -1795,7 +1795,7 @@ var profileApp = new Vue({
         content: {
             en: {
                 OTHER_LANGUAJE: 'Español',
-                DEV_TITLE: 'Game Developer',
+                DEV_TITLE: 'Lead Game Developer',
                 BODY: `I love games and technology, I like to be part of games that make great experiences and
                 memories in players around the world.`,
                 LANGUAGES: 'Languages',
@@ -1808,7 +1808,7 @@ var profileApp = new Vue({
             },
             es: {
                 OTHER_LANGUAJE: 'English',
-                DEV_TITLE: 'Desarrollador de videojuegos',
+                DEV_TITLE: 'Líder Desarrollador de videojuegos',
                 BODY: `Me encantan los juegos y la tecnología, me gusta ser parte de juegos que crean grandes experiencias y memorias para los jugadores del mundo.`,
                 LANGUAGES: 'Idiomas',
                 SPANISH: 'Español',
@@ -1826,11 +1826,9 @@ var profileApp = new Vue({
             { name: 'Vue.js', class: 'devicon-vuejs-plain', hovered: false },
             { name: 'CSS3', class: 'devicon-css3-plain', hovered: false },
             { name: 'PHP', class: 'devicon-php-plain', hovered: false },
-            { name: 'Java', class: 'devicon-java-plain', hovered: false },
             { name: 'Android', class: 'devicon-android-plain', hovered: false },
             { name: 'MySQL', class: 'devicon-mysql-plain', hovered: false },
             { name: 'Laravel', class: 'devicon-laravel-plain', hovered: false },
-            { name: 'Flutter', class: 'devicon-flutter-plain', hovered: false },
         ]
     },
     created() {

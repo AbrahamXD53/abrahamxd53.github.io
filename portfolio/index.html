@@ -10,7 +10,7 @@
 
     <link rel="stylesheet" href="css/colors1.css" id="dark">
     <link rel="stylesheet alternate" href="css/colors2.css" id="light">
-    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@master/devicon.min.css">
     <link rel="stylesheet" href="css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
@@ -48,7 +48,7 @@
                             class="fab fa-github"></i> Github</a>
                 </h3>
                 <br>
-                <h3>{{content[language]['LANGUAGES']}}</h3>
+                <h3 class="lang-title">{{content[language]['LANGUAGES']}}</h3>
                 <div style="display: flex; justify-content: space-around;">
                     <div style="width: 45%; display: inline-block; text-align: center;">
                         <div class="meter">
@@ -64,7 +64,7 @@
                     </div>
                 </div>
 
-                <h3>{{content[language]['SKILLS']}}</h3>
+                <h3 class="skills-title">{{content[language]['SKILLS']}}</h3>
                 <div class="skill-set">
                     <i :class="[item.class, {'colored': item.hovered}]" class="skill-icon"
                         @mouseover="item.hovered=true" @mouseleave="item.hovered=false"
