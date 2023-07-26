@@ -98,16 +98,16 @@ h4 {
     width: 100%;
     height: auto;
     background-color: var(--default-background);
-    background-image: url("../images/backgrounds/gaming-pattern.webp");
-    background-blend-mode: multiply;
+    background-image: var(--bg-img);
+    /*background-blend-mode: multiply;*/
 }
 
 .content-panel {
     width: 100%;
     height: auto;
     background-color: var(--default-background);
-    background-image: url("../images/backgrounds/gaming-pattern.webp");
-    background-blend-mode: multiply;
+    background-image: var(--bg-img);
+    /*background-blend-mode: multiply;*/
 }
 
 .main-container {
