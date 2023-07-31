@@ -1621,7 +1621,7 @@ var experienceApp = new Vue({
                     {
                         TITLE: 'Lead Game Developer - Bowhead Health',
                         START: 'Feb 2022',
-                        END: false,
+                        END: 'Jul 2023',
                         DESCRIPTION: `Game development, native mobile plugin development, fast prototype development.
                         <br>Third Party plugin integration (Firebase, Google Fit, Apple Health, Branch.io, Bytebrew)
                         <br><span class="work-skills">C#, Unity, Java, Swift, Metamask, ETH Blockchain</span><br>`
@@ -1660,7 +1660,7 @@ var experienceApp = new Vue({
                     {
                         TITLE: 'Líder Desarrollador de Juegos - Bowhead Health',
                         START: 'Feb 2022',
-                        END: false,
+                        END: 'Jul 2023',
                         DESCRIPTION: `Desarrollo de juegos, Desarrollo de plugins nativos, desarrollo rápido de prototipos.
                         <br>Integración de herreamientas de terceros (Firebase, Google Fit, Apple Health, Branch.io, Bytebrew)
                         <br><span class="work-skills">C#, Unity, Java, Swift, Metamask, ETH Blockchain</span><br>`
