@@ -377,6 +377,10 @@ h3>i {
     width: 100%;
 }
 
+.print-only {
+    display: none;
+}
+
 .img-profile {
     z-index: 400;
     width: 35%;
@@ -830,6 +834,34 @@ h3>i {
         margin: 0;
     }
 
+    .print-only {
+        display: block;
+    }
+
+    ::-webkit-scrollbar {
+        width: 0px;
+    }
+    
+    /* Track */
+    
+    ::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 0px grey;
+        border-radius: 0px;
+    }
+    
+    /* Handle */
+    
+    ::-webkit-scrollbar-thumb {
+        background: rgba(0, 0, 0, 0);
+        border-radius: 0px;
+    }
+    
+    /* Handle on hover */
+    
+    ::-webkit-scrollbar-thumb:hover {
+        background: rgba(0, 0, 0, 0.0);
+    }
+
     .profile-info>h1 {
         text-align: center;
         font-size: 28px;
@@ -846,7 +878,7 @@ h3>i {
 
     .skill-icon {
         font-size: 1.4em;
-        margin: 5px;
+        margin: 10px;
     }
 
     .section-title {
