@@ -1795,9 +1795,9 @@ var profileApp = new Vue({
         content: {
             en: {
                 OTHER_LANGUAJE: 'Español',
-                DEV_TITLE: 'Lead Game Developer',
-                BODY: `I love games and technology, I like to be part of games that make great experiences and
-                memories in players around the world.`,
+                DEV_TITLE: 'Lead Software Developer',
+                BODY: `I love technology, I like to build tech that make great experiences and
+                memories in users around the world.`,
                 LANGUAGES: 'Languages',
                 SPANISH: 'Spanish',
                 ENGLISH: 'English',
@@ -1808,8 +1808,8 @@ var profileApp = new Vue({
             },
             es: {
                 OTHER_LANGUAJE: 'English',
-                DEV_TITLE: 'Líder Desarrollador de videojuegos',
-                BODY: `Me encantan los juegos y la tecnología, me gusta ser parte de juegos que crean grandes experiencias y memorias para los jugadores del mundo.`,
+                DEV_TITLE: 'Líder Desarrollador de Software',
+                BODY: `Me encanta la tecnología, me gusta construir tecnología que crea grandes experiencias y memorias para los usuarios.`,
                 LANGUAGES: 'Idiomas',
                 SPANISH: 'Español',
                 ENGLISH: 'Inglés',
