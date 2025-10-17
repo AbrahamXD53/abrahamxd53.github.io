@@ -4,6 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Portfolio of Abraham Ahumada, showcasing projects, skills, and work experience.">
+    <meta name="keywords" content="Abraham Ahumada, Portfolio, Game Developer, Projects, Skills, Work Experience">
     <title>Abraham Ahumada's Portfolio</title>
 
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
@@ -25,7 +28,7 @@
                 <img src="images/bg_profile.webp" alt="" class="img-full-width">
                 <img src="images/profile-min-alt.webp" alt="" class="img-profile">
                 <div class="lang-selector" v-on:click="changeLanguage">
-                    <i class="fas fa-language"></i> {{content[language]['OTHER_LANGUAJE']}}
+                    <i class="fas fa-language"></i> {{content[language]['OTHER_LANGUAGE']}}
                 </div>
                 <div class="theme-selector" v-on:click="changeTheme">
                     <i class="fas fa-eye"></i> {{content[language][theme]}}
@@ -79,7 +82,7 @@
         </aside>
         <aside class="content-panel">
             <section class="content-section" id="work-experience">
-                <a id="section-1"></a>
+                <a id="section-experience"></a>
                 <h2 class="section-title"><i class="fas fa-briefcase big-icon"></i> {{content[language]['WORK_TITLE']}}
                 </h2>
                 <div v-for="(job, job_index) in content[language]['JOBS']" v-if="!job.requiresFull">
@@ -95,7 +98,7 @@
 
             </section>
             <section class="content-section" id="education">
-                <a id="section-2"></a>
+                <a id="section-education"></a>
                 <h2 class="section-title"><i class="fas fa-graduation-cap big-icon"></i>
                     {{content[language]['EDUCATION_TITLE']}}</h2>
                 <div v-for="(degree, degree_index) in content[language]['EDUCATION']">
@@ -110,6 +113,24 @@
                 </div>
 
             </section>
+            <!-- <section class="content-section" id="games-worked-on">
+                <a id="section-games"></a>
+                <h2 class="section-title"><i class="fas fa-gamepad big-icon"></i> {{content[language]['TITLE']}}</h2>
+                <div class="gallery">
+                    <div class="container-img" v-for="(game, index) in games" :key="index">
+                        <img v-bind:src="game.image" alt="" :id="['game' + index]" loading="lazy">
+                        <div class="overlay" v-on:click="openPreview(game, index)">
+                            <div class="gallery-text">
+                                {{game.name}}<br>
+                                ({{game.date}})
+                                <br>
+                                <br>
+                                <button class="btn btn-primary big-button">{{content[language]['MORE']}}</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>   -->
             <section class="content-section gallery-section" id="gallery">
                 <a id="section-gallery"></a>
                 <h2 class="section-title gallery-title"><i class="fas fa-gamepad big-icon"></i>
@@ -117,7 +138,7 @@
                 <div class="gallery">
                     <div class="container-img" v-for="(item, index) in items"
                         v-if="item.technologies.indexOf('')==-1 && !item.requiresFull">
-                        <img v-bind:src="item.image" alt="" :id="['g' + index]">
+                        <img v-bind:src="item.image" alt="" :id="['g' + index]" loading="lazy">
                         <div class="overlay" v-on:click="openPreview(item, index)">
                             <div class="gallery-text">
                                 {{item.name}}<br>
@@ -138,7 +159,7 @@
                 <h2 class="section-title gallery-title "><i class="far fa-images big-icon"></i>
                     {{content[language]['TITLE']}}</h2>
                 <div class='embed-container' v-for="video in videos">
-                    <iframe v-bind:src="video" frameborder='0' allowfullscreen></iframe>
+                    <iframe v-bind:src="video" frameborder="0" allowfullscreen loading="lazy"></iframe>
                 </div>
 
             </section>
@@ -149,7 +170,7 @@
                     {{content[language]['TITLE']}}</h2>
                 <div class="gallery">
                     <div class="container-img" v-for="(item, index) in items">
-                        <img v-bind:src="item.image" alt="" :id="['p' + index]">
+                        <img v-bind:src="item.image" alt="" :id="['p' + index]" loading="lazy">
                         <div class="overlay" v-on:click="openPreview(item, index)">
                             <div class="gallery-text">
                                 {{item.name}}<br>
@@ -178,7 +199,8 @@
                 <div class="modal-gallery">
 
                     <div class="modal-preview-background" v-if="!payload.gallery[selectedItem].video"
-                        :style="{ backgroundImage: `url(${payload.gallery[selectedItem].url})` }"></div>
+                         :class="{'background-image': payload.gallery[selectedItem].url}">
+                    </div>
                     <div class="modal-preview" v-if="!payload.gallery[selectedItem].video"
                         :style="{ backgroundImage: `url(${payload.gallery[selectedItem].url})` }"></div>
                     <div class='embed-container' v-if="payload.gallery[selectedItem].video">
@@ -205,7 +227,7 @@
                     <div class="modal-description-content">
                         <h3 class="text-right"><i class="fa fa-calendar-alt"></i> {{payload.date}}</h3>
                         <h2 class="preview-title"> {{payload.name}}</h2>
-                        <!-- <h4 class="tech-section text-right">Technologies:</h4> -->
+
                         <div class="tag-cloud">
                             <span class="small-tag" v-for="(item, index) in payload.technologies">{{item}}</span>
                         </div>

@@ -1619,6 +1619,14 @@ var experienceApp = new Vue({
                 WORK_TITLE: 'Work Experience',
                 JOBS: [
                     {
+                        TITLE: 'Sr Game Engineer - Amber Studio',
+                        START: 'Oct 2024',
+                        DESCRIPTION: `Game Development, Game support
+                        <br>Game bug fixes and updates to code base. Planned and implemented new features for games.
+                        <br>Game support for different platforms like iOS, Android and WebGL on Facebook Games.
+                        <br><span class="work-skills">C#, Unity, Ruby, MySQL</span><br>`
+                    },
+                    {
                         TITLE: 'Lead Game Developer - Bowhead Health',
                         START: 'Feb 2022',
                         END: 'Jul 2023',
@@ -1631,7 +1639,7 @@ var experienceApp = new Vue({
                         START: 'Apr 2018',
                         END: 'Feb 2022',
                         DESCRIPTION: `Developed and implemented solutions for international game distribution.
-                        <br>Subscriptions, on-deman content, payment validations.
+                        <br>Subscriptions, on-deman content delivery, purchase recipt validation.
                         <br><span class="work-skills">PHP, MySQL, JS, CSS, HTML</span><br>`
                     },
                     {
@@ -1656,7 +1664,15 @@ var experienceApp = new Vue({
             es: {
                 CURRENT: 'Actualidad',
                 WORK_TITLE: 'Experiencia Laboral',
-                JOBS: [
+                JOBS: [ 
+                    {
+                        TITLE: 'Sr Game Engineer - Amber Studio',
+                        START: 'Oct 2024',
+                        DESCRIPTION: `Desarrollo de juegos, soporte de juegos
+                        <br>Reparación de errores y actualización del código base. Planificación e implementación de nuevas caracateristicas de juego.
+                        <br>Soporte de juegos en plataformas iOS, Android y WebGL en Facebook Games.
+                        <br><span class="work-skills">C#, Unity, Ruby, MySQL</span><br>`
+                    },
                     {
                         TITLE: 'Líder Desarrollador de Juegos - Bowhead Health',
                         START: 'Feb 2022',
@@ -1783,7 +1799,128 @@ var footerApp = new Vue({
             this.language = lang
         })
     }
-})
+});
+
+var gamesWorkedOnApp = new Vue({
+    el: '#games-worked-on',
+    data: {
+        language: 'en',
+        content: {
+            en: {
+                TITLE: 'Games I\'ve worked on',
+                MORE: 'More',
+                DESCRIPTION: `I have worked on several games, some of them are available for download, others are not. <br>Click on the image to see more details.`
+            },
+            es: {
+                TITLE: 'Juegos en los que he trabajado',
+                MORE: 'Más',
+                DESCRIPTION: `He trabajado en varios juegos, algunos de ellos están disponibles para descargar, otros no. <br>Haz click en la imagen para ver más detalles.`
+            }
+        },
+        games: [
+            {
+                name: 'Wrande',
+                image: 'images/wrande/kSzfct.gif',
+                date: '2022',
+                description: {
+                    en: `Survive waves of monsters that escaped from a laboratory. Small enemies are faster than big enemies.`,
+                    es: `Sobrevive a oleadas de monstruos que escaparon de un laboratorio. Los enemigos pequeños son más rápidos que los grandes.`
+                },
+                technologies: ['Unity', 'C#'],
+                gallery: [
+                    { video: false, url: 'images/wrande/kSzfct.gif' },
+                    { video: false, url: 'images/wrande/qBb1gn.png' }
+                ]
+            },
+            {
+                name: 'uTabletop',
+                image: 'images/utabletop/utabletop2.png',
+                date: '2021',
+                description: {
+                    en: `Play your favorite board games with friends, up to 8 players online. Cross-platform support for Web, Android, and Windows.`,
+                    es: `Juega tus juegos de mesa favoritos con amigos, hasta 8 jugadores en línea. Compatible con Web, Android y Windows.`
+                },
+                technologies: ['Unity', 'Photon 2', 'Webserver'],
+                gallery: [
+                    { video: false, url: 'images/utabletop/utabletop2.png' },
+                    { video: false, url: 'images/utabletop/utabletop6.png' }
+                ]
+            },
+            {
+                name: 'Brainfuck 2D',
+                image: 'images/brainfuck/vAP2fg.webp',
+                date: '2021',
+                description: {
+                    en: `An expansion of the Brainfuck programming language with a memory matrix and texture mode for pixel art.`,
+                    es: `Una expansión del lenguaje de programación Brainfuck con una matriz de memoria y modo de textura para pixel art.`
+                },
+                technologies: ['Unity', 'Brainfuck'],
+                gallery: [
+                    { video: false, url: 'images/brainfuck/vAP2fg.webp' },
+                    { video: false, url: 'images/brainfuck/DD3E+5.webp' }
+                ]
+            },
+            {
+                name: 'Baking Crew',
+                image: 'images/baking_crew/baking-crew.webp',
+                date: '2021',
+                description: {
+                    en: `Help the baker make delicious cookies. Match all the cookies before time runs out.`,
+                    es: `Ayuda al repostero a hacer galletas deliciosas. Junta todas las galletas antes de que se acabe el tiempo.`
+                },
+                technologies: ['Unity', 'Game Jam'],
+                gallery: [
+                    { video: true, url: 'https://www.youtube-nocookie.com/embed/-KKmB0qEoJQ' },
+                    { video: false, url: 'images/baking_crew/F5LxAU.webp' }
+                ]
+            }
+            // Add more games here as needed
+        ]
+    },
+    created() {
+        this.updateLanguage()
+
+        EventBus.$on('update-language', (lang) => {
+            this.language = lang
+            this.updateLanguage()
+        })
+
+        let urlSearchParams = new URLSearchParams(window.location.search)
+        let params = Object.fromEntries(urlSearchParams.entries())
+
+        if (params.hasOwnProperty('game')) {
+            let id = params['game']
+            console.log(id)
+            if (id >= 0 && id < this.games.length) {
+                document.getElementById('game' + id).scrollTo();
+                this.openPreview(this.games[id])
+            }
+        }
+    },
+    methods:{
+        openPreview: function (context, id) {
+            EventBus.$emit('open-preview', context)
+
+            if (id >= 0) {
+                let queryParams = new URLSearchParams(window.location.search)
+                queryParams.set('game', id)
+                history.replaceState(null, null, "?" + queryParams.toString())
+            }
+        },
+        updateLanguage: function () {
+
+            for (const key in this.games) {
+                if (this.games.hasOwnProperty(key)) {
+                    this.games[key].rawBody = this.games[key].template
+                    while (m = keywordRegex.exec(this.games[key].rawBody)) {
+                        let keyName = m[0].substring(1, m[0].length - 1).toLowerCase()
+                        this.games[key].rawBody = this.games[key].rawBody.replace(m[0], this.games[key].content[this.language][keyName])
+                    }
+                }
+            }
+        },
+    }
+});
 
 
 var profileApp = new Vue({
@@ -1796,7 +1933,7 @@ var profileApp = new Vue({
             en: {
                 OTHER_LANGUAJE: 'Español',
                 DEV_TITLE: 'Lead Game Developer',
-                BODY: `I love games and technology, I like to be part of games that make great experiences and
+                BODY: `I love games and technology, I like to be part of games and projects that create great experiences and
                 memories in players around the world.`,
                 LANGUAGES: 'Languages',
                 SPANISH: 'Spanish',
@@ -1809,7 +1946,7 @@ var profileApp = new Vue({
             es: {
                 OTHER_LANGUAJE: 'English',
                 DEV_TITLE: 'Líder Desarrollador de videojuegos',
-                BODY: `Me encantan los juegos y la tecnología, me gusta ser parte de juegos que crean grandes experiencias y memorias para los jugadores del mundo.`,
+                BODY: `Me encantan los juegos y la tecnología, me gusta ser parte de juegos y proyectos que crean grandes experiencias y memorias para los jugadores del mundo.`,
                 LANGUAGES: 'Idiomas',
                 SPANISH: 'Español',
                 ENGLISH: 'Inglés',
@@ -1819,7 +1956,7 @@ var profileApp = new Vue({
             }
         },
         skills: [
-            { name: 'Unity', class: 'devicon-unity-original', hovered: false },
+            { name: 'Unity', class: 'devicon-unity-plain', hovered: false },
             { name: 'C#', class: 'devicon-csharp-plain', hovered: false },
             { name: 'C++', class: 'devicon-cplusplus-plain', hovered: false },
             { name: 'JS', class: 'devicon-javascript-plain', hovered: false },
@@ -1829,6 +1966,7 @@ var profileApp = new Vue({
             { name: 'Android', class: 'devicon-android-plain', hovered: false },
             { name: 'MySQL', class: 'devicon-mysql-plain', hovered: false },
             { name: 'Laravel', class: 'devicon-laravel-plain', hovered: false },
+            { name: 'Unreal', class: 'devicon-unrealengine-plain', hovered: false },
         ]
     },
     created() {
