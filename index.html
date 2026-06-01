@@ -1,567 +1,164 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <title>Abraham Ahumada's Portfolio | Home</title>
-    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
-    <link rel="icon" href="./favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="assets/web/assets/mobirise-icons/mobirise-icons.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik:300,300i,400,400i,500,500i,700,700i,900,900i">
-    <link rel="stylesheet" href="assets/tether/tether.min.css">
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/socicon/css/styles.css">
-    <link rel="stylesheet" href="assets/as-pie-progress/css/progress.min.css">
-    <link rel="stylesheet" href="assets/dropdown/css/style.css">
-    <link rel="stylesheet" href="assets/theme/css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Rubik:300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
-    <link href="assets/fonts/style.css" rel="stylesheet">
-    <link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
-    <link rel="stylesheet" href="assets/css/mainStyle.css">
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <meta http-equiv="Refresh" content="0; url='./portfolio/index.html'" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abraham Ahumada</title>
+    <link rel="shortcut icon" href="portfolio/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="portfolio/images/favicon.ico" type="image/x-icon">
 
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-55610625-2"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Manrope:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@master/devicon.min.css">
 
-      gtag('config', 'UA-55610625-2');
-    </script>
+    <style>
+        :root {
+            --bg-color: #f4f1ea;
+            --text-color: #1f1f1f;
+            --panel-color: #fffdfa;
+            --panel-border: #dfd9cc;
+            --accent-color: #2b6cb0;
+            --accent-alt: #0f766e;
+            --shadow-color: rgba(30, 41, 59, 0.14);
+        }
 
+        * {
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            width: 100%;
+            min-height: 100%;
+            margin: 0;
+        }
+
+        body {
+            display: grid;
+            place-items: center;
+            background: radial-gradient(circle at top, #fffefa 0%, var(--bg-color) 58%, #ece6d7 100%);
+            color: var(--text-color);
+            font-family: "Manrope", sans-serif;
+            padding: 24px;
+        }
+
+        .landing {
+            width: min(760px, 100%);
+            text-align: center;
+            background-color: var(--panel-color);
+            border: 1px solid var(--panel-border);
+            border-radius: 20px;
+            padding: 42px 28px;
+            box-shadow: 0 24px 54px var(--shadow-color);
+        }
+
+        .title {
+            margin: 0 0 10px 0;
+            font-family: "DM Serif Display", serif;
+            font-weight: 400;
+            font-size: clamp(2rem, 5vw, 3.2rem);
+            line-height: 1.1;
+            letter-spacing: 0.5px;
+        }
+
+        .subtitle {
+            margin: 0 0 28px 0;
+            font-size: clamp(0.95rem, 2vw, 1.05rem);
+            color: #5b5b5b;
+        }
+
+        .link-row {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 14px;
+            flex-wrap: wrap;
+            margin-bottom: 26px;
+        }
+
+        .link-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            color: #ffffff;
+            font-family: "Manrope", sans-serif;
+            font-weight: 700;
+            padding: 12px 18px;
+            border-radius: 12px;
+            transition: transform 120ms ease, filter 120ms ease;
+        }
+
+        .link-pill:hover {
+            transform: translateY(-2px);
+            filter: brightness(1.03);
+        }
+
+        .link-pill:focus-visible {
+            outline: 3px solid #111111;
+            outline-offset: 2px;
+        }
+
+        .link-portfolio {
+            background: linear-gradient(135deg, var(--accent-color), #435edb);
+        }
+
+        .link-linkedin {
+            background: linear-gradient(135deg, var(--accent-alt), #35884e);
+        }
+
+        .icon-row {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 16px;
+            flex-wrap: wrap;
+            font-size: clamp(1.75rem, 4vw, 2.2rem);
+        }
+
+        .icon-row i {
+            color: #2d3748;
+            filter: drop-shadow(0 3px 6px rgba(15, 23, 42, 0.18));
+        }
+
+        @media (max-width: 480px) {
+            .landing {
+                padding: 34px 18px;
+                border-radius: 18px;
+            }
+
+            .link-pill {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <section class="menu cid-qs2ItuaHrx" once="menu" id="menu1-g" data-rv-view="1615">
+    <main class="landing">
+        <h1 class="title">Abraham Ahumada</h1>
+        <p class="subtitle">Game Developer and Software Engineer</p>
 
-
-
-        <nav class="navbar navbar-dropdown align-items-center navbar-toggleable-sm bg-color transparent">
-            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </button>
-            <div class="menu-logo" id="app">
-                <div class="navbar-brand">
-
-                    <span class="navbar-caption-wrap"><a @click="changeLang" class="navbar-caption text-white display-5" href="#">
-                        {{langData[language].cool}}</a></span>
-                </div>
-            </div>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent" >
-                <ul class="navbar-nav nav-dropdown nav-right" data-app-modern-menu="true" id="app-menu">
-                    <li class="nav-item dropdown open">
-                        <a class="nav-link link text-white dropdown-toggle display-4" href="https://mobirise.com" data-toggle="dropdown-submenu"
-                            aria-expanded="true"><span class="mbri-globe mbr-iconfont mbr-iconfont-btn" style="color: rgb(57, 190, 106);"></span>{{langData[language].language}}</a>
-                        <div class="dropdown-menu"><a class="text-white dropdown-item display-4" href="#" @click="changeLang('es')">{{langData[language].languagees}}<br></a><a class="text-white dropdown-item display-4" @click="changeLang('en')"
-                                href="#">{{langData[language].languageen}}<br></a></div>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link link text-white display-4" href="index.html#progress-bars2-i"><span class="mbri-user mbr-iconfont mbr-iconfont-btn" style="color: rgb(20, 157, 204);"></span>{{langData[language].aboutme}}<br></a>
-                    </li>
-                    <li class="nav-item"><a class="nav-link link text-white display-4" href="gallery.html"><span class="mbri-website-theme mbr-iconfont mbr-iconfont-btn" style="color: rgb(247, 237, 74);"></span>{{langData[language].gallery}}<br></a></li>
-                    <li class="nav-item"><a class="nav-link link text-white display-4" href="index.html#form1-s"><span class="mbri-edit mbr-iconfont mbr-iconfont-btn" style="color: rgb(255, 51, 102);"></span>{{langData[language].beep}}</a></li>
-                </ul>
-
-            </div>
+        <nav class="link-row" aria-label="Main links">
+            <a class="link-pill link-portfolio" href="portfolio/index.html">
+                <i class="devicon-unity-plain"></i>
+                Portfolio
+            </a>
+            <a class="link-pill link-linkedin" href="https://www.linkedin.com/in/abraham-ahumada/" target="_blank" rel="noopener noreferrer">
+                <i class="devicon-linkedin-plain"></i>
+                LinkedIn
+            </a>
         </nav>
-    </section>
 
-    <section class="engine"></section>
-    <section class="cid-qs4ggDxkZj mbr-fullscreen mbr-parallax-background" id="header2-18" data-rv-view="1617">
-
-
-
-        <div class="mbr-overlay" style="opacity: 0.8; background-color: rgb(35, 35, 35);"></div>
-
-        <div class="container align-center" id="app-intro">
-            <div class="media-container-column mbr-white col-md-10 offset-md-1">
-                <h1 class="mbr-section-title mbr-bold pb-3 mbr-fonts-style display-1">01001000 01001001 00100001</h1>
-                <h3 class="mbr-section-subtitle align-center mbr-light pb-3 mbr-fonts-style display-2">{{langData[language].welcome}}<strong>{{langData[language].who}}</strong>&nbsp;</h3>
-                <p class="mbr-text pb-3 mbr-fonts-style display-5">{{langData[language].hello}}</p>
-
-            </div>
-        </div>
-        <div class="mbr-arrow hidden-sm-down" aria-hidden="true">
-            <a href="#next">
-            <i class="mbri-down mbr-iconfont"></i>
-        </a>
-        </div>
-    </section>
-
-    <section class="progress-bars2 cid-qs2NyIVLoM pattern" id="progress-bars2-i" data-rv-view="1620">
-
-
-
-        <div class="mbr-overlay" style="opacity: 0.7; background-color: rgb(35, 35, 35);">
-        </div>
-
-        <div class="container" id="app-about-me">
-            <h2 class="mbr-section-title pb-3 align-center mbr-fonts-style display-2"><strong>{{langData[language].whatidotitle}}</strong></h2>
-
-            <h3 class="mbr-section-subtitle mbr-fonts-style display-7"><strong><em>{{langData[language].whatido}}</em></strong><br><strong><em>&nbsp;<br></em></strong>
-                <div>{{langData[language].howidoit1}} <strong> Unity3D </strong>{{langData[language].howidoit2}}  <strong>Corona SDK</strong> (Lua), <strong>Unreal Engine 4</strong> (C++ {{langData[language].and}} Blueprints), <strong>XNA </strong>{{langData[language].howidoit3}} <strong>Dirext </strong> {{langData[language].and}} <strong>OpenGL </strong>APIs (C++).
-                </div>
-                <div>&nbsp;</div>
-                <div>{{langData[language].aboutweb1}} (<strong>Laravel</strong>), CSS3 (<strong>SASS </strong>preprocessor),
-                    HTML5 {{langData[language].and}} JavaScript (Angular, React, Vue).</div><br>
-                <div>{{langData[language].applications}} <strong>Ionic.</strong></div>
-            </h3>
-
-            <div class="row pt-5 mt-5">
-                <div class="col-md-6 text-elements">
-                    <h4 class="section-content-title pb-3 align-left mbr-fonts-style display-2">{{langData[language].aboutme}}</h4>
-                    <p class="section-content-text align-left mbr-fonts-style display-7">{{langData[language].degree1}} <br><br>{{langData[language].degree2}} <br><br>
-                        {{langData[language].meinwork}}<br>
-                        <br>{{langData[language].hobbies}}
-                        <br></p>
-                </div>
-                <div class="progress_elements col-md-6">
-                    <h4 class="section-content-title pb-3 align-left mbr-fonts-style display-2">{{langData[language].programminglangs}}</h4>
-                    <div class="progress1 pb-5">
-                        <div class="title-wrap">
-                            <div class="progressbar-title mbr-fonts-style display-7">
-                                <p>
-                                    C#</p>
-                            </div>
-                            <div class="progress_value mbr-fonts-style display-7">
-                                <div class="progressbar-number">
-                                </div>
-                                <span>%</span>
-                            </div>
-                        </div>
-                        <progress class="progress progress-primary " max="100" value="90">
-                        </progress>
-                    </div>
-
-                    <div class="progress2 pb-5">
-                        <div class="title-wrap">
-                            <div class="progressbar-title mbr-fonts-style display-7">
-                                <p>JavaScript</p>
-                            </div>
-                            <div class="progress_value mbr-fonts-style display-7">
-                                <div class="progressbar-number">
-                                </div>
-                                <span>%</span>
-                            </div>
-                        </div>
-                        <progress class="progress progress-primary" max="100" value="85">
-                        </progress>
-                    </div>
-
-                    <div class="progress3 pb-5">
-                        <div class="title-wrap">
-                            <div class="progressbar-title mbr-fonts-style display-7">
-                                <p>C++</p>
-                            </div>
-                            <div class="progress_value mbr-fonts-style display-7">
-                                <div class="progressbar-number">
-                                </div>
-                                <span>%</span>
-                            </div>
-                        </div>
-                        <progress class="progress progress-primary" max="100" value="80">
-                        </progress>
-                    </div>
-
-                    <div class="progress4 pb-5">
-                        <div class="title-wrap">
-                            <div class="progressbar-title mbr-fonts-style display-7">
-                                <p>
-                                    Java</p>
-                            </div>
-                            <div class="progress_value mbr-fonts-style display-7">
-                                <div class="progressbar-number">
-                                </div>
-                                <span>%</span>
-                            </div>
-                        </div>
-                        <progress class="progress progress-primary" max="100" value="80">
-                        </progress>
-                    </div>
-
-                    <div class="progress5 pb-5">
-                        <div class="title-wrap">
-                            <div class="progressbar-title mbr-fonts-style display-7">
-                                <p>
-                                    PHP</p>
-                            </div>
-                            <div class="progress_value mbr-fonts-style display-7">
-                                <div class="progressbar-number">
-                                </div>
-                                <span>%</span>
-                            </div>
-                        </div>
-                        <progress class="progress progress-primary" max="100" value="80">
-                        </progress>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="progress-bars3 cid-qs30X5GzC0 mbr-parallax-background pattern" id="progress-bars3-j" data-rv-view="1623">
-
-
-
-        <div class="mbr-overlay" style="opacity: 0.8; background-color: rgb(35, 35, 35);">
-        </div>
-
-        <div class="container" >
-            <h2 id="app-tools-title" class="mbr-section-title pb-3 align-center mbr-fonts-style display-2"><strong>{{langData[language].frameworksandtoolstitle}} </strong></h2>
-
-            <h3 id="app-tools" class="mbr-section-subtitle mbr-fonts-style display-5">{{langData[language].frameworksandtools}} &nbsp;</h3>
-
-            <div class="media-container-row pt-5 mt-2">
-                <div class="card p-3 align-center">
-                    <div class="wrap">
-                        <div class="pie_progress progress1" role="progressbar" data-goal="95">
-                            <p class="pie_progress__number mbr-fonts-style display-5">50%</p>
-                        </div>
-                    </div>
-                    <div class="mbr-crt-title pt-3">
-                        <h4 class="card-title py-2 mbr-fonts-style display-5">
-                            Unity3D</h4>
-                    </div>
-                </div>
-
-                <div class="card p-3 align-center">
-                    <div class="wrap">
-                        <div class="pie_progress progress2" role="progressbar" data-goal="90">
-                            <p class="pie_progress__number mbr-fonts-style display-5"></p>
-                        </div>
-                    </div>
-                    <div class="mbr-crt-title pt-3">
-                        <h4 class="card-title py-2 mbr-fonts-style display-5">Ionic</h4>
-                    </div>
-                </div>
-
-                <div class="card p-3 align-center">
-                    <div class="wrap">
-                        <div class="pie_progress progress3" role="progressbar" data-goal="80">
-                            <p class="pie_progress__number mbr-fonts-style display-5"></p>
-                        </div>
-                    </div>
-                    <div class="mbr-crt-title pt-3">
-                        <h4 class="card-title py-2 mbr-fonts-style display-5">
-                            Laravel</h4>
-                    </div>
-                </div>
-
-                <div class="card p-3 align-center">
-                    <div class="wrap">
-                        <div class="pie_progress progress4" role="progressbar" data-goal="75">
-                            <p class="pie_progress__number mbr-fonts-style display-5"></p>
-                        </div>
-                    </div>
-                    <div class="mbr-crt-title pt-3">
-                        <h4 class="card-title py-2 mbr-fonts-style display-5">Firebase/Back4App</h4>
-                    </div>
-                </div>
-
-                <div class="card p-3 align-center">
-                    <div class="wrap">
-                        <div class="pie_progress progress5" role="progressbar" data-goal="90">
-                            <p class="pie_progress__number mbr-fonts-style display-5"></p>
-                        </div>
-                    </div>
-                    <div class="mbr-crt-title pt-3">
-                        <h4 class="card-title py-2 mbr-fonts-style display-5">Vuforia (AR)</h4>
-                    </div>
-                </div>
-
-                <div class="card p-3 align-center">
-                    <div class="wrap">
-                        <div class="pie_progress progress6" role="progressbar" data-goal="80">
-                            <p class="pie_progress__number mbr-fonts-style display-5"></p>
-                        </div>
-                    </div>
-                    <div class="mbr-crt-title pt-3">
-                        <h4 class="card-title py-2 mbr-fonts-style display-5">
-                            Oculus Rift</h4>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="timeline1 cid-qs3nv5OM4J pattern" id="timeline1-u" data-rv-view="1626">
-
-
-
-        <div class="mbr-overlay" style="opacity: 0.7; background-color: rgb(35, 35, 35);">
-        </div>
-
-        <div class="container align-center" id="app-experience">
-            <h2 class="mbr-section-title pb-3 mbr-fonts-style display-2"><strong>
-                {{langData[language].workexperience}}
-        </strong></h2>
-
-
-            <div class="container timelines-container" mbri-timelines="">
-                <div class="row timeline-element separline">
-                    <div class="timeline-date-panel col-xs-12 col-md-6 align-right">
-                        <div class="time-line-date-content">
-                            <p class="mbr-timeline-date mbr-fonts-style display-5"><strong>Sep 2017 - Now</strong></p>
-                        </div>
-                    </div>
-                    <span class="iconBackground"></span>
-                    <div class="col-xs-12 col-md-6 align-left ">
-                        <div class="timeline-text-content">
-                            <h4 class="mbr-timeline-title pb-3 mbr-fonts-style display-5">Gameloft</h4>
-                            <p class="mbr-timeline-text mbr-fonts-style display-7"><strong>Developer</strong><br>Research and Development
-                                <br>iOS Support</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="row timeline-element reverse separline">
-                    <div class="timeline-date-panel col-xs-12 col-md-6  align-left">
-                        <div class="time-line-date-content">
-                            <p class="mbr-timeline-date mbr-fonts-style display-5"><strong>Sep 2016 - Sep 2017</strong></p>
-                        </div>
-                    </div>
-                    <span class="iconBackground"></span>
-                    <div class="col-xs-12 col-md-6 align-right">
-                        <div class="timeline-text-content">
-                            <h4 class="mbr-timeline-title pb-3 mbr-fonts-style display-5">AORI Brand Media<br></h4>
-                            <p class="mbr-timeline-text mbr-fonts-style display-7"><strong>Back-End Developer</strong><br>Develop Restful APIs<br>Database Modeling<br>Hibryd Mobile
-                                App Development</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row timeline-element ">
-                    <div class="timeline-date-panel col-xs-12 col-md-6 align-right">
-                        <div class="time-line-date-content">
-                            <p class="mbr-timeline-date mbr-fonts-style display-5"><strong>Jun 2014 - Sep 2016</strong></p>
-                        </div>
-                    </div>
-                    <span class="iconBackground"></span>
-                    <div class="col-xs-12 col-md-6 align-left ">
-                        <div class="timeline-text-content">
-                            <h4 class="mbr-timeline-title pb-3 mbr-fonts-style display-5">Aquarium Gaming</h4>
-                            <p class="mbr-timeline-text mbr-fonts-style display-7"><strong>CTO</strong><br>Develop Game Core Mechanics
-                                <br>Network programmer
-                                <br>Database Modeling</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="progress-bars3 cid-qs7QGiORoc mbr-parallax-background" id="progress-bars3-1u" data-rv-view="1629">
-
-
-
-        <div class="mbr-overlay" style="opacity: 0.9; background-color: rgb(35, 35, 35);">
-        </div>
-
-        <div class="container">
-            <h2  id="app-languages-title" class="mbr-section-title pb-3 align-center mbr-fonts-style display-2">{{langData[language].languagesandostitle}}</h2>
-
-            <h3  id="app-languages" class="mbr-section-subtitle mbr-fonts-style display-5">{{langData[language].languagesandos}}</h3>
-
-            <div class="media-container-row pt-5 mt-2">
-                <div class="card p-3 align-center">
-                    <div class="wrap">
-                        <div class="pie_progress progress1" role="progressbar" data-goal="95">
-                            <p class="pie_progress__number mbr-fonts-style display-5"></p>
-                        </div>
-                    </div>
-                    <div class="mbr-crt-title pt-3">
-                        <h4 class="card-title py-2 mbr-fonts-style display-5">
-                            Spanish</h4>
-                    </div>
-                </div>
-
-                <div class="card p-3 align-center">
-                    <div class="wrap">
-                        <div class="pie_progress progress2" role="progressbar" data-goal="65">
-                            <p class="pie_progress__number mbr-fonts-style display-5">60%</p>
-                        </div>
-                    </div>
-                    <div class="mbr-crt-title pt-3">
-                        <h4 class="card-title py-2 mbr-fonts-style display-5">English</h4>
-                    </div>
-                </div>
-
-                <div class="card p-3 align-center">
-                    <div class="wrap">
-                        <div class="pie_progress progress3" role="progressbar" data-goal="95">
-                            <p class="pie_progress__number mbr-fonts-style display-5"></p>
-                        </div>
-                    </div>
-                    <div class="mbr-crt-title pt-3">
-                        <h4 class="card-title py-2 mbr-fonts-style display-5">
-                            Windows</h4>
-                    </div>
-                </div>
-
-                <div class="card p-3 align-center">
-                    <div class="wrap">
-                        <div class="pie_progress progress4" role="progressbar" data-goal="80">
-                            <p class="pie_progress__number mbr-fonts-style display-5"></p>
-                        </div>
-                    </div>
-                    <div class="mbr-crt-title pt-3">
-                        <h4 class="card-title py-2 mbr-fonts-style display-5">
-                            Mac Os</h4>
-                    </div>
-                </div>
-
-                <div class="card p-3 align-center">
-                    <div class="wrap">
-                        <div class="pie_progress progress5" role="progressbar" data-goal="80">
-                            <p class="pie_progress__number mbr-fonts-style display-5"></p>
-                        </div>
-                    </div>
-                    <div class="mbr-crt-title pt-3">
-                        <h4 class="card-title py-2 mbr-fonts-style display-5">
-                            Linux</h4>
-                    </div>
-                </div>
-
-
-            </div>
-        </div>
-    </section>
-
-    <section class="mbr-section info3 cid-qs9Fw7pq2f mbr-parallax-background" id="info3-22" data-rv-view="1632">
-
-
-
-        <div class="mbr-overlay" style="opacity: 0.8; background-color: rgb(35, 35, 35);">
-        </div>
-
-        <div class="container" id="app-work">
-            <div class="media-container-column title col-12 col-md-10 offset-md-1">
-                <h2 class="align-left mbr-bold mbr-white pb-3 mbr-fonts-style display-2">
-                    <a href="gallery.html" class="text-white">{{langData[language].myworktitle}}</a></h2>
-                <h3 class="mbr-section-subtitle align-left mbr-light mbr-white pb-3 mbr-fonts-style display-5"><a href="gallery.html" class="text-white">
-                    {{langData[language].myworkdesc}}</a></h3>
-
-
-            </div>
-        </div>
-    </section>
-
-    <section class="mbr-section form1 cid-qs3naVbUpr" id="form1-s" data-rv-view="1635">
-
-
-
-        <div class="mbr-overlay" style="opacity: 0.3; background-color: rgb(0, 0, 0);">
-        </div>
-        <div class="container" id="app-contact">
-            <div class="media-container-column title col-12 col-lg-8 offset-lg-2">
-                <h2 class="mbr-section-title align-center pb-3 mbr-fonts-style display-2"><strong>{{langData[language].lastcalltittle}}</strong></h2>
-                <h3 class="mbr-section-subtitle align-center mbr-light pb-3 mbr-fonts-style display-5">{{langData[language].lastcall}}</h3>
-            </div>
-        </div>
-
-        <div class="container" id="app-form">
-            <div class="media-container-column col-lg-8 offset-lg-2" data-form-type="formoid">
-                <div data-form-alert="" hidden="">Thanks, I'll get in touch with you.</div>
-
-                <form class="mbr-form" action="https://mobirise.com/" method="post" data-form-title="Mobirise Form"><input type="hidden" data-form-email="true" value="x4beryyYJJx5DnvBl2pr+rJndFCGF209985qwo3U651+YpR9bU9cSzigzhI/aZPkDWlt20qXdDvL+N7b5oXKDVYzf8bPVjYvxWaXl1B9QFOqZeIyOyWj0CL48n9cywHb">
-                    <div class="row row-sm-offset">
-                        <div class="col-md-4 multi-horizontal" data-for="name">
-                            <div class="form-group">
-                                <label class="form-control-label mbr-fonts-style display-7" for="name-form1-s">{{langData[language].name}}</label>
-                                <input type="text" class="form-control" name="name" data-form-field="Name" required=""  v-bind:placeholder="langData[language].sayname"
-                                    id="name-form1-s">
-                            </div>
-                        </div>
-                        <div class="col-md-4 multi-horizontal" data-for="email">
-                            <div class="form-group">
-                                <label class="form-control-label mbr-fonts-style display-7" for="email-form1-s">Email</label>
-                                <input type="email" class="form-control" name="email" data-form-field="Email" required="" v-bind:placeholder="langData[language].saymail"
-                                    id="email-form1-s">
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="form-group" data-for="message">
-                        <label class="form-control-label mbr-fonts-style display-7" for="message-form1-s">{{langData[language].message}}</label>
-                        <textarea type="text" class="form-control" name="message" rows="7" data-form-field="Message" v-bind:placeholder="langData[language].saywhatagain"
-                            id="message-form1-s"></textarea>
-                    </div>
-
-                    <span class="input-group-btn"><button href="" type="submit" class="btn btn-form btn-primary-outline display-4">{{langData[language].sayhello}}</button></span>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <section once="" class="cid-qs3O6hUdGx pattern" id="footer7-z" data-rv-view="1638">
-
-
-
-        <div class="mbr-overlay" style="background-color: rgb(35, 35, 35); opacity: 0.8;"></div>
-
-        <div class="container">
-            <div class="media-container-row align-center mbr-white">
-                <div class="row">
-                    <ul class="foot-menu">
-
-
-
-
-
-                        <li class="foot-menu-item mbr-fonts-style display-7">Follow me!</li>
-                    </ul>
-                </div>
-                <div class="row">
-                    <div class="social-list align-right pb-2">
-                        <div class="soc-item">
-                            <a href="https://twitter.com/myselfxd53" target="_blank">
-                            <span class="socicon-twitter socicon mbr-iconfont mbr-iconfont-social" media-simple="true"></span>
-                        </a>
-                        </div>
-                        <div class="soc-item">
-                            <a href="https://github.com/AbrahamXD53" target="_blank">
-                            <span class="mbr-iconfont mbr-iconfont-social socicon-github socicon" media-simple="true"></span>
-                        </a>
-                        </div>
-                        <div class="soc-item">
-                            <a href="https://www.youtube.com/channel/UCDL8xAM5LNq5CcImuv_UkNw?view_as=subscriber" target="_blank">
-                            <span class="socicon-youtube socicon mbr-iconfont mbr-iconfont-social" media-simple="true"></span>
-                        </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="row row-copirayt">
-                    <p class="mbr-text mb-0 mbr-fonts-style mbr-white display-7">
-                        © Copyright 2018 Abraham Ahumada - All Rights Reserved
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <script src="assets/web/assets/jquery/jquery.min.js"></script>
-    <script src="assets/tether/tether.min.js"></script>
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="assets/smooth-scroll/smooth-scroll.js"></script>
-    <script src="assets/touch-swipe/jquery.touch-swipe.min.js"></script>
-    <script src="assets/jarallax/jarallax.min.js"></script>
-    <script src="assets/as-pie-progress/jquery-as-pie-progress.min.js"></script>
-    <script src="assets/dropdown/js/script.min.js"></script>
-    <script src="assets/theme/js/script.js"></script>
-    <script src="assets/formoid/formoid.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
-    <script src="assets/js/vue/view.js"></script>
+        <section class="icon-row" aria-label="Developer tools and languages">
+            <i class="devicon-csharp-plain" title="C#"></i>
+            <i class="devicon-cplusplus-plain" title="C++"></i>
+            <i class="devicon-javascript-plain" title="JavaScript"></i>
+        </section>
+    </main>
 </body>
 
 </html>

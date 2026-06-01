@@ -167,11 +167,13 @@ var galleryApp = new Vue({
                         <br>
                         <br>
                         
+                        <ul>
                         <li>Left stick - Move</li>
                         <li>Right stick - Aim</li>
                         <li>Left trigger - Left  weapon</li>
                         <li>Right trigger - Right weapon</li>
-                        <li>Select  - Reset/Retry</li>`,
+                        <li>Select  - Reset/Retry</li>
+                        </ul>`,
                         download: 'Download it here!'
                     },
                     es: {
@@ -195,11 +197,13 @@ var galleryApp = new Vue({
                         <br>
                         <br>
                         
+                        <ul>
                         <li>Palanca Izq - Mover</li>
-                        <li>Palanca Der - Apunta</li>
-                        <li>Gatillo Izq - Arma Izquierda/li>
+                        <li>Palanca Der - Apuntar</li>
+                        <li>Gatillo Izq - Arma Izquierda</li>
                         <li>Gatillo Der - Arma Derecha</li>
-                        <li>Select  - Reiniciar/Reintentar</li>.`,
+                        <li>Select  - Reiniciar/Reintentar</li>
+                        </ul>`,
                         download: '¡Descárgalo aquí!'
                     },
                 },
@@ -229,7 +233,7 @@ var galleryApp = new Vue({
                     en: {
                         part: 'Solo Dev ',
                         roles: 'Programmer C#',
-                        body: `Play your favorite boardgames with your friends, up-to 8 players online. Available languages: English, Spanish, Portuguese.<br><br>Crossplatform:<br>
+                        body: `Play your favorite board games with your friends, up to 8 players online. Available languages: English, Spanish, and Portuguese.<br><br>Cross-platform:<br>
                         <ul><li>Web (Chrome, Opera, Edge)</li><li>Android</li><li>Windows</li>`,
                         download_pc: 'Download (Windows)',
                         download_android: 'Download (Android)'
@@ -237,7 +241,7 @@ var galleryApp = new Vue({
                     es: {
                         part: 'Proyecto en solitario ',
                         roles: 'Programador C#',
-                        body: `Juega tus favoritos juegos de mesa con hasta 8 jugadores en línea. Idiomas disponibles: Ingles, Español, Portugues.<br><br>Compatible con las siguientes plataformas<br>
+                        body: `Juega tus juegos de mesa favoritos con hasta 8 jugadores en línea. Idiomas disponibles: inglés, español y portugués.<br><br>Compatible con las siguientes plataformas:<br>
                         <ul><li>Web (Chrome, Opera, Edge)</li><li>Android</li><li>Windows</li>`,
                         download_pc: 'Descargar (Windows)',
                         download_android: 'Descargar (Android)',
@@ -270,7 +274,7 @@ var galleryApp = new Vue({
                         part: 'Solo Dev ',
                         roles: 'Programmer C#',
                         body: `Brainfuck is an esoteric programming language created in 1993 by Urban Müller.<br><br>
-                        Now its expanded with a memory matrix and texture mode  where you can draw pixel art with 256 color levels.<br> Two new instructions   ^   (move pointer Up) and v (move pointer Down).`,
+                        Now it's expanded with a memory matrix and texture mode where you can draw pixel art with 256 color levels.<br>Two new instructions: ^ (move pointer up) and v (move pointer down).`,
                         download: 'Download it here!'
                     },
                     es: {
@@ -306,13 +310,13 @@ var galleryApp = new Vue({
                     en: {
                         part: 'Participated as ',
                         roles: 'Programmer C#',
-                        body: `Meowltiplayer! a game about finding a mischievous cat.<br>Up to five online players<br><br>Android and Windows cross platform.<br><br>Grand Michi Auto`,
+                        body: `Meowltiplayer! A game about finding a mischievous cat.<br>Up to five online players.<br><br>Android and Windows cross-platform.<br><br>Grand Michi Auto`,
                         download: 'Download it here!'
                     },
                     es: {
                         part: 'Participé como ',
                         roles: 'Programador C#',
-                        body: `Miaultiplayer! un juego sobre encontrar un gato travieso.<br>Hasta 5 jugadores en linea.<br>Disponible para jugar entre plataformas Android y Windows.<br><br>Grand Michi Auto `,
+                        body: `Miaultiplayer! Un juego sobre encontrar un gato travieso.<br>Hasta 5 jugadores en línea.<br>Disponible para jugar entre plataformas Android y Windows.<br><br>Grand Michi Auto `,
                         download: '¡Descárgalo aquí!'
                     },
                 },
@@ -378,8 +382,8 @@ var galleryApp = new Vue({
                     en: {
                         part: 'Participated as ',
                         roles: 'Programmer C#',
-                        body: `Take care of your sking while growing your own farm.<br>
-                        AR Game with hand traking.<br><br>
+                        body: `Take care of your skin while growing your own farm.<br>
+                        AR game with hand tracking.<br><br>
                         Derm Farm is a game about your skin. Grow amazing crops on your skin and reap the rewards of being fresh.<br>`,
                         download: 'Download it here!'
                     },
@@ -388,7 +392,7 @@ var galleryApp = new Vue({
                         roles: 'Programador C#',
                         body: `Cuida tu piel mientras creces los cultivos de tu propia granja.<br>
                         Juego de RA con seguimiento de manos.<br><br>
-                        Derm Farm es un juego sobre tu piel. Crece cultivos asombrosos en tu piel y recive los premios de tener una piel fresca.`,
+                        Derm Farm es un juego sobre tu piel. Cultiva cosechas asombrosas en tu piel y recibe las recompensas de tener una piel fresca.`,
                         download: '¡Descárgalo aquí!'
                     },
                 },
@@ -415,9 +419,9 @@ var galleryApp = new Vue({
                     en: {
                         part: 'Participated as ',
                         roles: 'Composer',
-                        body: `After delivering a delicius food in a misterious laboratory, you'll need to escape before your health runs out<br>
-                        Get all required key to unlock the door<br>
-                        Blue circles are sefe zones, you health won't be affected there.`,
+                        body: `After delivering delicious food in a mysterious laboratory, you'll need to escape before your health runs out.<br>
+                        Get all required keys to unlock the door.<br>
+                        Blue circles are safe zones; your health won't be affected there.`,
                         download: 'Download it here!'
                     },
                     es: {
@@ -425,7 +429,7 @@ var galleryApp = new Vue({
                         roles: 'Compositor',
                         body: `Como repartidor, te ha tocado una entrega en un peligroso laboratorio, escapa antes de que se termine tu vida.<br>
                         Recolecta las llaves para desbloquear la salida.<br>
-                        Los circulos azules son zonas seguras, ahi tu salud no se verá afectada.`,
+                        Los círculos azules son zonas seguras; ahí tu salud no se verá afectada.`,
                         download: '¡Descárgalo aquí!'
                     },
                 },
@@ -491,16 +495,16 @@ var galleryApp = new Vue({
                     en: {
                         part: 'Solo dev ',
                         roles: 'Programmer C#',
-                        body: `Join into the jumping crew!<br>
+                        body: `Join the jumping crew!<br>
                         Share adventures with Jimmy and Ritta (more characters will join the crew soon).<br>
-                        Get upgrades with in game currency.`,
+                        Get upgrades with in-game currency.`,
                         download: 'Download it here!'
                     },
                     es: {
                         part: 'Proyecto en solitario ',
                         roles: 'Programador C#',
                         body: `¡Únete al jumping crew!<br>
-                        Comparte aventuras con Jimmy y Ritta (mas personajes se uniran a la pandilla pronto).<br>
+                        Comparte aventuras con Jimmy y Ritta (más personajes se unirán a la pandilla pronto).<br>
                         Adquiere mejoras para tu personaje recolectando monedas en el juego.`,
                         download: '¡Descárgalo aquí!'
                     },
@@ -528,15 +532,15 @@ var galleryApp = new Vue({
                     en: {
                         part: 'Solo dev ',
                         roles: 'Programmer C#',
-                        body: `It's a tool that will let you generate 3D models using one image, It works perfectly with pixel art.<br>
+                        body: `It's a tool that lets you generate 3D models using one image. It works perfectly with pixel art.<br>
                         <br><b>Features:</b>
                         <ul>
                             <li>Export to <b>Obj</b> (Wavefront)</li>
                             <li>Split texture and generate one model by tile.</li>
                             <li>Split texture based on Alpha channel or choose a color</li>
                             <li>Debug mode (Generate only outlines)</li>
-                            <li>Set generated 3d model anchor.</li>
-                            <li>Customize 3d model depth.</li>
+                            <li>Set generated 3D model anchor.</li>
+                            <li>Customize 3D model depth.</li>
                         </ul>
                         `,
                         download: 'Get it here!'
@@ -544,11 +548,11 @@ var galleryApp = new Vue({
                     es: {
                         part: 'Proyecto en solitario ',
                         roles: 'Programmer C#',
-                        body: `Es una herremiente que te permitira crear modelos 3d utilizando una imagen, funciona perfectamente con pizel art.<br>
-                        <br><b>Caracteristicas:</b>
+                        body: `Es una herramienta que te permitirá crear modelos 3D utilizando una imagen; funciona perfectamente con pixel art.<br>
+                        <br><b>Características:</b>
                         <ul>
                             <li>Exporta en formato <b>Obj</b> (Wavefront)</li>
-                            <li>Recorta la textura en mosaicos y genera un modelo por cada cada mosaico</li>
+                            <li>Recorta la textura en mosaicos y genera un modelo por cada mosaico.</li>
                             <li>Delimita la figura de tu sprite con un color, puede ser transparencia</li>
                             <li>Modo de solo bordes.</li>
                             <li>Establece el origen de los modelos.</li>
@@ -584,11 +588,11 @@ var galleryApp = new Vue({
                     en: {
                         part: 'Participated as ',
                         roles: 'Programmer C#',
-                        body: `Welcome to the world in 2008, when the houses were abandoned due to the high mortage rates. Your house is now abandoned and needs to compete with others to get a family and become their home.
+                        body: `Welcome to the world in 2008, when houses were abandoned due to high mortgage rates. Your house is now abandoned and needs to compete with others to get a family and become their home.
                         <br><br><b>Controls</b>:
                         <ul>
                             <li><p><b>Keyboard</b>
-                                <br>Move: WASD/Arryws
+                                <br>Move: WASD/Arrows
                                 <br>Run/Action: Space
                                 <br>Reset: R
                                 <br>Fire: X/M
@@ -606,7 +610,7 @@ var galleryApp = new Vue({
                     es: {
                         part: 'Participé como ',
                         roles: 'Programador C#',
-                        body: `Bienvenido al mundo en el año 2008, cuando las casas han sido abandonadas por la crisis economica. Tu casa ahora esta abandonada y necesitara competir contra otras para poder ser el hagar de una nueva familia.
+                        body: `Bienvenido al mundo en el año 2008, cuando las casas fueron abandonadas por la crisis económica. Tu casa ahora está abandonada y necesitará competir contra otras para poder ser el hogar de una nueva familia.
                         <br><br><b>Controles</b>:
                         <ul>
                             <li><p><b>Teclado</b>
@@ -651,13 +655,13 @@ var galleryApp = new Vue({
                     en: {
                         part: 'Participated as ',
                         roles: 'Programmer C#',
-                        body: `Try to get the hight score, made in a jam updated later, you can see an updated version in the videos section.<br>`,
+                        body: `Try to get the high score. Made in a jam and updated later; you can see an updated version in the videos section.<br>`,
                         download: 'Play it here!'
                     },
                     es: {
                         part: 'Participé como ',
                         roles: 'Programador C#',
-                        body: `Trata de obtener la puntuación mas alta, hecho en una jam actualizado un tiempo despues, puede ver una versión actualizada en la sección de videos.<br>`,
+                        body: `Trata de obtener la puntuación más alta. Hecho en una jam y actualizado un tiempo después; puedes ver una versión actualizada en la sección de videos.<br>`,
                         download: '¡Descárgalo aquí!'
                     },
                 },
@@ -730,7 +734,7 @@ var galleryApp = new Vue({
                     en: {
                         part: 'Solo dev ',
                         roles: 'Programmer JS',
-                        body: `This is a 2D oriented WebGL engine.
+                        body: `This is a 2D-oriented WebGL engine.
                         <br><br><b>Features</b>:
                         <ul>
                             <li>Sprites</li>
@@ -740,7 +744,7 @@ var galleryApp = new Vue({
                             <li>Tiled maps</li>
                             <li>Layer system</li>
                             <li>Audio support</li>
-                            <li>Touch and gamepads support</li>
+                            <li>Touch and gamepad support</li>
                             <li>Cameras</li>
                             <li>Scenes</li>
                             <li>Particle system</li>
@@ -761,20 +765,20 @@ var galleryApp = new Vue({
                         part: 'Proyecto en solitario ',
                         roles: 'Programador JS',
                         body: `Este es un motor WebGL orientado al 2D.
-                        <br><br><b>Caracteristicas</b>:
+                        <br><br><b>Características</b>:
                         <ul>
                             <li>Sprites</li>
                             <li>Sprites animados</li>
                             <li>Fuentes</li>
-                            <li>Luces (Punto, Direccional, Area)</li>
-                            <li>Mapas de mozaicos</li>
+                            <li>Luces (Punto, Direccional, Área)</li>
+                            <li>Mapas de mosaicos</li>
                             <li>Sistema de capas</li>
                             <li>Soporte para audio</li>
-                            <li>Soporte para controles tactiles</li>
-                            <li>Camaras</li>
+                            <li>Soporte para controles táctiles</li>
+                            <li>Cámaras</li>
                             <li>Escenas</li>
-                            <li>Sistemas de particulas</li>
-                            <li>Fisicas 2D (Matterjs)</li>
+                            <li>Sistemas de partículas</li>
+                            <li>Físicas 2D (Matterjs)</li>
                             <li>Administrador de archivos</li>
                         </ul>
 
@@ -784,7 +788,7 @@ var galleryApp = new Vue({
                             <li>SZXC: Mover al robot pequeño</li>
                             <li>F: Screen-shake!</li>
                         </ul>`,
-                        download: '¡Pruebalo aquí!'
+                        download: '¡Pruébalo aquí!'
                     },
                 },
                 rawBody: '',
@@ -811,10 +815,10 @@ var galleryApp = new Vue({
                         roles: 'Programmer C#',
                         body: `A multiplayer experience.
                         <br>Play as a World War II Submarine and beat enemy ships and submarines searched by radio transmissions.
-                        <br>Up to four player!
+                        <br>Up to four players!
                         <br><br><b>Controls:</b>
                         <ul>
-                            <li><p>Keyborad + Mouse:
+                            <li><p>Keyboard + Mouse:
                             <br>WASD: Move
                             <br>Mouse + Click: Activate Radio
                             <br>Space: Join/Select
@@ -834,9 +838,9 @@ var galleryApp = new Vue({
                         part: 'Participé como ',
                         roles: 'Programador C#',
                         body: `Una experiencia multijugador<br>
-                        <br>Juega como un submarino y derrota a otros submarinos enemigos a los cuales deberas detectar y disparar.
-                        <br>Hasta 4 jugadores
-                        <br><br><b>Controls:</b>
+                        <br>Juega como un submarino y derrota a otros submarinos enemigos, a los cuales deberás detectar y disparar.
+                        <br>Hasta 4 jugadores.
+                        <br><br><b>Controles:</b>
                         <ul>
                             <li><p>Teclado + Ratón:
                             <br>WASD: Moverse
@@ -850,7 +854,7 @@ var galleryApp = new Vue({
                             <br>Palanca Derecha: Activar Radio
                             <br>A: Unirse/Aceptar 
                             <br>Izquierda/Derecha: Cambiar personaje
-                            </b></li>
+                            </p></li>
                         </ul>
                         `,
                         download: '¡Descárgalo aquí!'
@@ -887,7 +891,7 @@ var galleryApp = new Vue({
                         <br>Up to 4 players! 
                         <br><br><b>Controls:</b>
                         <ul>
-                            <li><p>Keyborad + Mouse:
+                            <li><p>Keyboard + Mouse:
                             <br>WASD: Move
                             <br>Mouse + Click: Send Light
                             <br>Space: Join/Select
@@ -906,7 +910,7 @@ var galleryApp = new Vue({
                     es: {
                         part: 'Participated as ',
                         roles: 'Programmer C#',
-                        body: `¡Diviertete solo o con amigos, explorando tumbas subterraneas y encontrando tesoros!
+                        body: `¡Diviértete solo o con amigos, explorando tumbas subterráneas y encontrando tesoros!
                         <br><b>Instrucciones:</b> Join then select match (Coop or VS)
                         <br>Up to 4 players! 
                         <br><br><b>Controles:</b>
@@ -924,7 +928,7 @@ var galleryApp = new Vue({
                             <br>Izquierda/Derecha: Cambiar personaje
                             </p></li>
                         </ul>`,
-                        download: '¡Decárgalo aquí!'
+                        download: '¡Descárgalo aquí!'
                     },
                 },
                 rawBody: '',
@@ -964,7 +968,7 @@ var galleryApp = new Vue({
                         roles: 'Programmer C#',
                         body: `Sueña con cambiar el universo.
                         <br>Crea y elimina planetas a tu gusto para llevar la pequeña nave a su destino.`,
-                        download: '¡Descargalo aquí (Android)!'
+                        download: '¡Descárgalo aquí (Android)!'
                     },
                 },
                 rawBody: '',
@@ -998,9 +1002,9 @@ var galleryApp = new Vue({
                     es: {
                         part: 'Participated as ',
                         roles: 'Programmer C#',
-                        body: `Conduce sobre tantos peatones como puedas en un minuto, obten las distintas mejoras y trata de obtener la mejor puntuación en línea.
-                        <br>Hecho para la jam de Idies vs Gamers.
-                        <br>Conecta con tu cuenta de Gamejolt para registras tu puntuación en línea`,
+                        body: `Conduce sobre tantos peatones como puedas en un minuto, obtén distintas mejoras y trata de lograr la mejor puntuación en línea.
+                        <br>Hecho para la jam de Indies vs Gamers.
+                        <br>Conecta tu cuenta de Gamejolt para registrar tu puntuación en línea.`,
                         download: '¡Descárgalo aquí!'
                     },
                 },
@@ -1032,12 +1036,12 @@ var galleryApp = new Vue({
                     en: {
                         part: 'Participated as ',
                         roles: 'Programmer C#',
-                        body: `Three friends get lost in a forbiden zone controled by evil crocodiles. Try to escape before they catch you.
-                        <br>Every character has its own skill, combine their skill to escape from the level
+                        body: `Three friends get lost in a forbidden zone controlled by evil crocodiles. Try to escape before they catch you.
+                        <br>Every character has a unique skill; combine those skills to escape the level.
                         <br><br><b>Skills:</b>
                         <ul>
-                            <li>Fish: (Pasive) Open doors</li>
-                            <li>Rabitt: Lift charge</li>
+                            <li>Fish: (Passive) Open doors</li>
+                            <li>Rabbit: Lift charge</li>
                             <li>Cat: Place bait</li>
                         </ul>
                         <b>Controls:</b>
@@ -1063,7 +1067,7 @@ var galleryApp = new Vue({
                         <b>Controles:</b>
                         <ul>
                             <li>Tab: Cambiar personaje</li>
-                            <li>Clic izq/der: Cambiar angulo</li>
+                            <li>Clic izq/der: Cambiar ángulo</li>
                             <li>Espacio: Comenzar/Utilizar habilidad</li>
                             <li>WASD: Mover personaje</li>
                         </ul>
@@ -1112,7 +1116,7 @@ var galleryApp = new Vue({
                         roles: 'Programador C#',
                         body: `Compite contra otros jugadores por capturar todos los monstruos.
                         <br>Juego entre plataformas, juega con Android o PC con hasta 32 jugadores.
-                        <br>Soporte de controles tactiles para Android`,
+                        <br>Soporte de controles táctiles para Android.`,
                         download_android: 'Juego para Android',
                         download_pc: 'Juego para PC'
                     },
@@ -1142,9 +1146,9 @@ var galleryApp = new Vue({
                     en: {
                         part: 'Participated as ',
                         roles: 'Programmer C#',
-                        body: `A robot crashed on a town called "Guevaria."
-                        <br>Villagers are very kind with it ans start to ask to do some task when they are in trouble.
-                        <br>Vallagers task after some time become jus caprices, so there is something that is telling the robot that it's doing evil things.
+                        body: `A robot crashes in a town called "Guevaria."
+                        <br>Villagers are very kind to it and start asking for help when they are in trouble.
+                        <br>After some time, those tasks become mere whims, and something tells the robot that it's doing evil things.
                         <br><br><b>Controls:</b>
                         <ul>
                             <li>E: Interact/Start</li>
@@ -1158,12 +1162,12 @@ var galleryApp = new Vue({
                         part: 'Participé como  ',
                         roles: 'Programador C#',
                         body: `Un robot llega de forma inesperada al pueblo llamado "Guevaria".
-                        <br>Los aldeanos reciben calurosamente al robot y empiezan a recurrir a el cuando están en problemas.
+                        <br>Los aldeanos reciben calurosamente al robot y empiezan a recurrir a él cuando están en problemas.
                         <br>Los favores que los aldeanos le piden se van convirtiendo en caprichos, pero hay algo en el robot que le dice que lo que está haciendo está mal.
                         <br><br><b>Controles:</b>
                         <ul>
                             <li>E: Interactuar/Comenzar</li>
-                            <li>Mouse: Camara</li>
+                            <li>Mouse: Cámara</li>
                             <li>WASD: Mover</li>
                             <li>Espacio: Saltar</li>
                         </ul>`,
@@ -1197,8 +1201,8 @@ var galleryApp = new Vue({
                     en: {
                         part: 'Participated as ',
                         roles: 'Programmer C#',
-                        body: `Follow Juanito and Juanita on an incredible adventure, in an increble world, take pictures of animals on each level, and run with you favorite animal to meet an ancient dragon.
-                        <br<br><b>Controls:</b>
+                        body: `Follow Juanito and Juanita on an incredible adventure in an incredible world. Take pictures of animals on each level and run with your favorite animal to meet an ancient dragon.
+                        <br><br><b>Controls:</b>
                         <ul>
                             <li>Mouse: Camera</li>
                             <li>T: Open Camera</li>
@@ -1212,11 +1216,11 @@ var galleryApp = new Vue({
                     es: {
                         part: 'Participé como  ',
                         roles: 'Programador C#',
-                        body: `Acompaña a Juanito y Juanita en una increible aventura, en un mundo increible, toma fotos de los animales en cada nivel y corre con un aliado para conocer al antiguo dragón.
-                        <br<br><b>Controles:</b>
+                        body: `Acompaña a Juanito y Juanita en una increíble aventura, en un mundo increíble. Toma fotos de los animales en cada nivel y corre con un aliado para conocer al antiguo dragón.
+                        <br><br><b>Controles:</b>
                         <ul>
                             <li>Mouse: Cámara</li>
-                            <li>T: Abrir Cámera</li>
+                            <li>T: Abrir cámara</li>
                             <li>Mouse Clic: (Modo Cámara) Tomar foto</li>
                             <li>WASD: Mover</li>
                             <li>Shift: Correr</li>
@@ -1258,8 +1262,8 @@ var galleryApp = new Vue({
                     en: {
                         part: 'Participated as ',
                         roles: 'Programmer C#',
-                        body: `Deffend your poor little heart before a it gets a heart attack!
-                        <br>With your allies "Paka Pakapsules", thay will help you to stop the different diseases.
+                        body: `Defend your poor little heart before it gets a heart attack!
+                        <br>With your allies "Paka Pakapsules," they will help you stop different diseases.
                         <br><br><b>Controls (Menu):</b>
                         <ul>
                             <li>A - D: Move</li>
@@ -1271,15 +1275,15 @@ var galleryApp = new Vue({
                     es: {
                         part: 'Participé como ',
                         roles: 'Programador C#',
-                        body: `¡Defiende tu corazón antes de que te de un infarto!
-                        <br>Claro, usa las pildoras "Paka Pakapsula", te ayudarán para defenderte de los "Tapa-arterias"
+                        body: `¡Defiende tu corazón antes de que te dé un infarto!
+                        <br>Claro, usa las píldoras "Paka Pakapsula"; te ayudarán a defenderte de los "Tapa-arterias".
                         <br><br><b>Controles (Menú):</b>
                         <ul>
                             <li>A - D: Mover</li>
                             <li>Espacio: Aceptar</li>
-                            <li>Escape: Atras</li>
+                            <li>Escape: Atrás</li>
                         </ul>`,
-                        download: 'Download it here!'
+                        download: '¡Descárgalo aquí!'
                     },
                 },
                 rawBody: '',
@@ -1309,14 +1313,14 @@ var galleryApp = new Vue({
                         roles: 'Programmer C#',
                         body: `Survive the zombie apocalypse, find all the weapons and destroy the boss.
                         <br><a href="https://www.microsoft.com/en-us/download/details.aspx?id=20914" >Requires XNA Framework Redistributable</a> 
-                        <br><b>Requires a Xbox 360 gamepad to play, it may be a generic one.</b>
+                        <br><b>Requires an Xbox 360 gamepad to play; it may be a generic one.</b>
                         <br><br><b>Controls:</b>
                         <ul>
                             <li>Back + Start: Skip story</li>
                             <li>Left stick: Move</li>
                             <li>LB/RB: Change weapon</li>
-                            <li>Right stick: Shot/Throw granade</li>
-                            <li>Right trigger: Active grenade mode (Once you've collected grenades).</li>
+                            <li>Right stick: Shoot/Throw grenade</li>
+                            <li>Right trigger: Activate grenade mode (once you've collected grenades).</li>
                         </ul>`,
                         download: 'Download it here!'
                     },
@@ -1325,14 +1329,14 @@ var galleryApp = new Vue({
                         roles: 'Programmer C#',
                         body: `Sobrevive al apocalipsis zombie, encuentra las armas y destruye al jefe zombie.
                         <br><a href="https://www.microsoft.com/en-us/download/details.aspx?id=20914" >Requiere XNA Framework Redistributable</a> 
-                        <br><b>Require un control de Xbox, puede ser genérico</b>
+                        <br><b>Requiere un control de Xbox; puede ser genérico.</b>
                         <br><br><b>Controles:</b>
                         <ul>
                             <li>Back + Start: Saltar historia</li>
                             <li>Palanca izquierda: Mover</li>
                             <li>LB/RB: Cambiar arma</li>
                             <li>Palanca derecha: Disparar/Aventar granada</li>
-                            <li>Gatillo derecho + : Activa el modo granadas (Sí se recolecto antes)</li>
+                            <li>Gatillo derecho: Activa el modo granadas (si se recolectaron antes).</li>
                         </ul>`,
                         download: '¡Descárgalo aquí!'
                     },
@@ -1428,12 +1432,12 @@ var proyectData = new Vue({
                     en: {
                         part: 'Participated as ',
                         roles: 'Programmer C#',
-                        body: `In an urban exploration you have lost your friend, now you have to find him and try to escape avoiding to get lost in this mysterious mansion, that will be waiting for your.`,
+                        body: `During an urban exploration, you lose your friend. Now you must find him and escape this mysterious mansion, which is waiting for you.`,
                     },
                     es: {
                         part: 'Participé como ',
                         roles: 'Programador C#',
-                        body: `Durante una exploracion urbana a una vieja mansión has perdido a tu amigo, ahora deberas encontrarlo y evitar perderte en una antigua mansión que estará a la espera de que te descuides un poco.`,
+                        body: `Durante una exploración urbana en una vieja mansión has perdido a tu amigo. Ahora deberás encontrarlo y evitar perderte en esta misteriosa mansión, que estará a la espera de que te descuides un poco.`,
                     },
                 },
                 rawBody: '',
@@ -1458,9 +1462,9 @@ var proyectData = new Vue({
                     en: {
                         part: 'Participated as ',
                         roles: 'Programmer C#',
-                        body: `Unlock a new item every month!,
+                        body: `Unlock a new item every month!
                         <br>Find your codes in your favorite products.
-                        <br>Share your collection with other players or in social networks.`,
+                        <br>Share your collection with other players or on social networks.`,
                     },
                     es: {
                         part: 'Participated as ',
@@ -1496,13 +1500,13 @@ var proyectData = new Vue({
                         part: 'Participated as ',
                         roles: 'Programmer C#',
                         body: `AR Showcase with customizations (rotation, scale, position, color customizations).<br>
-                        Torch-Light and custom markers avaliables.`
+                        Torch light and custom markers available.`
                     },
                     es: {
                         part: 'Participé como ',
                         roles: 'Programmer C#',
                         body: `Exhibición de RA con personalizaciones (rotación, escala, posición, variaciones de color).<br>
-                        Linterna y marcadores personalizados disponibles para su uso en la appliación.`
+                        Linterna y marcadores personalizados disponibles para su uso en la aplicación.`
                     },
                 },
                 rawBody: '',
@@ -1529,7 +1533,7 @@ var proyectData = new Vue({
                     en: {
                         part: 'Participated as ',
                         roles: 'Programmer C#',
-                        body: `Manage yout own soccer team and even better your own city!
+                        body: `Manage your own soccer team and, even better, your own city!
                         <br>Compete against other players online.
                         <br>Manage your team, fire and hire new soccer players.
                         <br>Travel to new worlds with new abilities.`,
@@ -1537,10 +1541,10 @@ var proyectData = new Vue({
                     es: {
                         part: 'Participé como ',
                         roles: 'Programador C#',
-                        body: `!Administra tu propio equipo de fútbol y mucho mejor administra tu propia ciudad!
+                        body: `¡Administra tu propio equipo de fútbol y, mejor aún, tu propia ciudad!
                         <br>Compite contra otros jugadores en línea.
                         <br>Administra tu equipo, despide y contrata nuevos jugadores.
-                        <br>Viaja hacia otros mundos con nuevas habilidades`,
+                        <br>Viaja hacia otros mundos con nuevas habilidades.`,
                     },
                 },
                 rawBody: '',
@@ -1639,7 +1643,7 @@ var experienceApp = new Vue({
                         START: 'Apr 2018',
                         END: 'Feb 2022',
                         DESCRIPTION: `Developed and implemented solutions for international game distribution.
-                        <br>Subscriptions, on-deman content delivery, purchase recipt validation.
+                        <br>Subscriptions, on-demand content delivery, purchase receipt validation.
                         <br><span class="work-skills">PHP, MySQL, JS, CSS, HTML</span><br>`
                     },
                     {
@@ -1647,8 +1651,8 @@ var experienceApp = new Vue({
                         START: 'Sep 2017',
                         END: 'Apr 2018',
                         DESCRIPTION: `iOS Game support, including porting games from x86 to x64. <br>
-                        Game bug fixes and update code base.
-                        <br><span class="work-skills">C++, Objetive-C, GLSL</span><br>`
+                        Game bug fixes and codebase updates.
+                        <br><span class="work-skills">C++, Objective-C, GLSL</span><br>`
                     },
                     {
                         requiresFull:true,
@@ -1669,7 +1673,7 @@ var experienceApp = new Vue({
                         TITLE: 'Sr Game Engineer - Amber Studio',
                         START: 'Oct 2024',
                         DESCRIPTION: `Desarrollo de juegos, soporte de juegos
-                        <br>Reparación de errores y actualización del código base. Planificación e implementación de nuevas caracateristicas de juego.
+                        <br>Reparación de errores y actualización del código base. Planificación e implementación de nuevas características de juego.
                         <br>Soporte de juegos en plataformas iOS, Android y WebGL en Facebook Games.
                         <br><span class="work-skills">C#, Unity, Ruby, MySQL</span><br>`
                     },
@@ -1678,14 +1682,14 @@ var experienceApp = new Vue({
                         START: 'Feb 2022',
                         END: 'Jul 2023',
                         DESCRIPTION: `Desarrollo de juegos, Desarrollo de plugins nativos, desarrollo rápido de prototipos.
-                        <br>Integración de herreamientas de terceros (Firebase, Google Fit, Apple Health, Branch.io, Bytebrew)
+                        <br>Integración de herramientas de terceros (Firebase, Google Fit, Apple Health, Branch.io, Bytebrew)
                         <br><span class="work-skills">C#, Unity, Java, Swift, Metamask, ETH Blockchain</span><br>`
                     },
                     {
                         TITLE: 'Desarrollador Full Stack - Gameloft',
                         START: 'Abr 2018',
                         END: 'Feb 2022',
-                        DESCRIPTION: `Desarrollar e impementar soluciones para la distribución de juegos a nivel internacional.
+                        DESCRIPTION: `Desarrollar e implementar soluciones para la distribución de juegos a nivel internacional.
                         <br>Suscripciones, contenido bajo demanda, validación de pagos.
                         <br><span class="work-skills">PHP, MySQL, JS, CSS, HTML</span><br>`
                     },
@@ -1693,17 +1697,17 @@ var experienceApp = new Vue({
                         TITLE: 'Investigación y Desarrollo - Gameloft',
                         START: 'Sep 2017',
                         END: 'Abr 2018',
-                        DESCRIPTION: `iOS soporte a juegos, incluido actualizar el código de plataformas x86 a x64.<br>
+                        DESCRIPTION: `Soporte de juegos para iOS, incluyendo actualización del código de plataformas x86 a x64.<br>
                         Corrección de errores y actualización del código base.
-                        <br><span class="work-skills">C++, Objetive-C, GLSL</span><br>`
+                        <br><span class="work-skills">C++, Objective-C, GLSL</span><br>`
                     },
                     {
                         requiresFull:true,
-                        TITLE: 'Desarollador Back-end - AORI Brand Media',
+                        TITLE: 'Desarrollador Back-end - AORI Brand Media',
                         START: 'Sep 2016',
                         END: 'Sep 2017',
                         DESCRIPTION: `Desarrollo de soluciones multiplataforma para Android y iOS.<br>
-                        Desarrollo de aplicaciones hibrídas.
+                        Desarrollo de aplicaciones híbridas.
                         <br><span class="work-skills">PHP, Laravel, MySQL, Ionic</span>`
                     }
                 ]
@@ -1786,10 +1790,10 @@ var footerApp = new Vue({
         year: (new Date()).getFullYear(),
         content: {
             en: {
-                BODY: `Mario character is property of Nintendo, all logos are property of their respective companies and its use in this page is merely illustrative.`
+                BODY: `The Mario character is the property of Nintendo. All logos are the property of their respective companies, and their use on this page is merely illustrative.`
             },
             es: {
-                BODY: `El personaje de Mario es propiedad de Nintendo, todo los logos y marcas son propiedad de sus respectivas compañias y su uso en este sitio es meramente ilustrativo.`
+                BODY: `El personaje de Mario es propiedad de Nintendo. Todos los logos y marcas son propiedad de sus respectivas compañías, y su uso en este sitio es meramente ilustrativo.`
             }
         }
     },
@@ -1932,9 +1936,9 @@ var profileApp = new Vue({
         content: {
             en: {
                 OTHER_LANGUAJE: 'Español',
-                DEV_TITLE: 'Lead Game Developer',
+                DEV_TITLE: 'Senior Game Developer',
                 BODY: `I love games and technology, I like to be part of games and projects that create great experiences and
-                memories in players around the world.`,
+                memories for players around the world.`,
                 LANGUAGES: 'Languages',
                 SPANISH: 'Spanish',
                 ENGLISH: 'English',
@@ -1945,7 +1949,7 @@ var profileApp = new Vue({
             },
             es: {
                 OTHER_LANGUAJE: 'English',
-                DEV_TITLE: 'Líder Desarrollador de videojuegos',
+                DEV_TITLE: 'Desarrollador de videojuegos senior',
                 BODY: `Me encantan los juegos y la tecnología, me gusta ser parte de juegos y proyectos que crean grandes experiencias y memorias para los jugadores del mundo.`,
                 LANGUAGES: 'Idiomas',
                 SPANISH: 'Español',

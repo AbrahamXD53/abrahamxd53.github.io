@@ -32,4 +32,11 @@
     --tag-alt-color: #2472c3;
     --bar-background: #222;
     --bg-img: url("../images/backgrounds/gaming-pattern-black.webp");
+    --profile-container-tint: #333333;
+    --profile-container-shadow-tint: rgba(238, 210, 169, 0.35);
+    --profile-bg-tint: rgba(129, 186, 120, 0.22);
+    --profile-shadow-tint: rgba(13, 43, 69, 0.65);
+    --profile-outline-tint: rgba(255, 212, 163, 0.92);
+    --profile-shadow-filter: brightness(0) saturate(100%) invert(44%) sepia(22%) saturate(5842%) hue-rotate(1deg) brightness(102%) contrast(106%);
+    --profile-outline-filter: brightness(0) invert(1) saturate(0) contrast(120%);
 }

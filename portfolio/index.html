@@ -26,7 +26,11 @@
         <aside class="main-panel" id="profile">
             <header class="header-banner">
                 <img src="images/bg_profile.webp" alt="" class="img-full-width">
-                <img src="images/profile-min-alt.webp" alt="" class="img-profile">
+                <div class="img-profile" aria-hidden="true">
+                    <div class="profile-layer profile-layer-bg"></div>
+                    <img src="images/profile_shadow.png" alt="" class="profile-layer profile-layer-shadow">
+                    <img src="images/profile_outline.png" alt="" class="profile-layer profile-layer-outline">
+                </div>
                 <div class="lang-selector" v-on:click="changeLanguage">
                     <i class="fas fa-language"></i> {{content[language]['OTHER_LANGUAGE']}}
                 </div>
@@ -40,13 +44,11 @@
                 <hr>
                 </hr>
                 <p class="profile-text">{{content[language]['BODY']}}</p>
-                <h3 class="h3-link"><a href="mailto:mp2014000@gmail.com" class="soft-link"><i
-                            class="fas fa-mail-bulk"></i>mp2014000@gmail.com</a>
+                <h3 class="h3-link"><a href="mailto:abraham.ahumada.se@gmail.com" class="soft-link"><i
+                            class="fas fa-mail-bulk"></i>abraham.ahumada.se@gmail.com</a>
                 </h3>
                 <h3 class="h3-link"><a href="https://www.linkedin.com/in/abraham-ahumada/" class="soft-link"><i
                             class="fab fa-linkedin"></i> LinkedIn</a></h3>
-                <h3 class="h3-link"><a href="https://app.codesignal.com/profile/myselfxd" class="soft-link"><i
-                            class="fa fa-code"></i>CodeSignal</a></h3>
                 <h3 class="h3-link"><a href="https://github.com/abrahamXD53" class="soft-link"><i
                             class="fab fa-github"></i> Github</a>
                 </h3>
